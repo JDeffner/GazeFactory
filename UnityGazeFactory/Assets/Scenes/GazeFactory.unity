@@ -1743,7 +1743,25 @@ MonoBehaviour:
     actionPath: /actions/default/in/Walking
     needsReinit: 0
   speed: 2
-  objectWithPlayerController: {fileID: 1649192278}
+  vrCameraTransform: {fileID: 1649192279}
+--- !u!143 &536692655
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536692651}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1.75
+  m_Radius: 0.12
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0.75, z: 0}
 --- !u!1 &572970251
 GameObject:
   m_ObjectHideFlags: 0
@@ -2382,9 +2400,21 @@ PrefabInstance:
       propertyPath: renderModelPrefab
       value: 
       objectReference: {fileID: 1000011547835092, guid: 8ade79fed86bbd141926d1cd94c98457, type: 3}
+    - target: {fileID: 11455280, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: head
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11455280, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 11465950, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13693334, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1000010010492814, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_Layer
@@ -3648,29 +3678,11 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!1 &1649192278 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 125964, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+--- !u!4 &1649192279 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 429506, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
   m_PrefabInstance: {fileID: 822762744}
   m_PrefabAsset: {fileID: 0}
---- !u!143 &1649192283
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1649192278}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 1.75
-  m_Radius: 0.2
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.75, z: 0}
 --- !u!1 &1730395113
 GameObject:
   m_ObjectHideFlags: 0
