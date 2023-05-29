@@ -2156,32 +2156,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.75, z: 0}
---- !u!114 &536692656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 536692651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd75ba5c81d1062479bfcf936b97c471, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetObject: {fileID: 1795858594}
-  viewCamera: {fileID: 1649192280}
-  cursorPrefab: {fileID: 1968597151943874546, guid: 5a4c035242de18d42bde1585aac115c3, type: 3}
-  maxCursorDistance: 30
-  targetObjects:
-  - {fileID: 1795858594}
-  cursorRotationOffsets:
-  - {x: 0, y: 0, z: 270}
-  cursorOffsets:
-  - {x: 0.7, y: 0, z: 0}
-  cursorBlinkInterval: 0.5
-  cursorColor: {r: 1, g: 1, b: 1, a: 1}
-  cursorAlpha: 0.3
-  isActive: 1
 --- !u!1 &549870146
 GameObject:
   m_ObjectHideFlags: 0
@@ -5375,11 +5349,6 @@ Rigidbody:
 --- !u!4 &1649192279 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 429506, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
-  m_PrefabInstance: {fileID: 822762744}
-  m_PrefabAsset: {fileID: 0}
---- !u!20 &1649192280 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 2014920, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
   m_PrefabInstance: {fileID: 822762744}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1690584610
