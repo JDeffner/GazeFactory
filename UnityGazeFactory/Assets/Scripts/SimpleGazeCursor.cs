@@ -5,11 +5,11 @@ using System.Collections.Generic;
 
 public class SimpleGazeCursor : MonoBehaviour {
 
-    public GameObject targetObject;
+    public GameObject targetedObejct;
     public Camera viewCamera;
     public GameObject cursorPrefab;
     public float maxCursorDistance = 30;
-    public List<GameObject> targetObjects; // Liste der Zielobjekte
+    public List<GameObject> targetedObjects; // Liste der Zielobjekte
     public List<Vector3> cursorRotationOffsets; // Liste der Richtungen, aus denen der Cursor erscheinen soll
     public List<Vector3> cursorOffsets; // Liste der Verschiebungen für den Cursor
     public float cursorBlinkInterval = 0.5f; // Intervall zwischen den Blink-Zustandsänderungen in Sekunden
@@ -43,16 +43,16 @@ public class SimpleGazeCursor : MonoBehaviour {
     /// </summary>
     private void UpdateCursor()
     {
-        if (targetObjects != null && targetObjects.Count > 0)
+        if (targetedObjects != null && targetedObjects.Count > 0)
         {
-            int currentIndex = targetObjects.IndexOf(targetObject);
+            int currentIndex = targetedObjects.IndexOf(targetedObejct);
 
             if (currentIndex >= 0 && currentIndex < cursorRotationOffsets.Count && currentIndex < cursorOffsets.Count)
             {
-                Vector3 cursorPosition = targetObject.transform.position + (targetObject.transform.up * cursorOffsets[currentIndex].y) + (targetObject.transform.right * cursorOffsets[currentIndex].x) + (targetObject.transform.forward * cursorOffsets[currentIndex].z);
+                Vector3 cursorPosition = targetedObejct.transform.position + (targetedObejct.transform.up * cursorOffsets[currentIndex].y) + (targetedObejct.transform.right * cursorOffsets[currentIndex].x) + (targetedObejct.transform.forward * cursorOffsets[currentIndex].z);
                 cursorInstance.transform.position = cursorPosition;
 
-                Quaternion targetRotation = Quaternion.LookRotation(targetObject.transform.forward, targetObject.transform.up) * Quaternion.Euler(cursorRotationOffsets[currentIndex]);
+                Quaternion targetRotation = Quaternion.LookRotation(targetedObejct.transform.forward, targetedObejct.transform.up) * Quaternion.Euler(cursorRotationOffsets[currentIndex]);
                 cursorInstance.transform.rotation = targetRotation;
             }
         }
