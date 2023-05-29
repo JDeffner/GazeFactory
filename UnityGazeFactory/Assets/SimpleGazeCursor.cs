@@ -12,11 +12,10 @@ public class SimpleGazeCursor : MonoBehaviour {
     public List<GameObject> targetObjects; // Liste der Zielobjekte
     public List<Vector3> cursorRotationOffsets; // Liste der Richtungen, aus denen der Cursor erscheinen soll
     public List<Vector3> cursorOffsets; // Liste der Verschiebungen für den Cursor
-
     public float cursorBlinkInterval = 0.5f; // Intervall zwischen den Blink-Zustandsänderungen in Sekunden
-
     public Color cursorColor = Color.white; // Farbe des Cursors
     public float cursorAlpha = 0.3f; // Transparenz Level 0 is vollkommen Transparent 1 ist vollkommen sichtbar
+    public bool isActive = false;
     private GameObject cursorInstance;
     private bool isCursorVisible = true; // Aktueller Zustand des Cursors (sichtbar/unsichtbar)
     private float blinkTimer = 0f; // Timer für den Blink-Effekt
@@ -81,7 +80,11 @@ public class SimpleGazeCursor : MonoBehaviour {
     /// </summary>
     private void ToggleCursorVisibility()
     {
-        isCursorVisible = !isCursorVisible;
+        if (isActive == false) {
+            isCursorVisible = false;
+        } else {
+            isCursorVisible = !isCursorVisible;
+        }   
 
         foreach (Renderer renderer in cursorRenderers)
         {
