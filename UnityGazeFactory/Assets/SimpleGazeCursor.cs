@@ -10,9 +10,9 @@ public class SimpleGazeCursor : MonoBehaviour {
     public GameObject cursorPrefab;
     public float maxCursorDistance = 30;
     public List<GameObject> targetedObjects; // Liste der Zielobjekte
-    public List<Vector3> cursorRotationOffsets; // Liste der Richtungen, aus denen der Cursor erscheinen soll
     public List<Vector3> cursorOffsets; // Liste der Verschiebungen für den Cursor
     public float cursorBlinkInterval = 0.5f; // Intervall zwischen den Blink-Zustandsänderungen in Sekunden
+    public float rotationSpeed = 10f; // Geschwindigkeit der Rotation
     public Color cursorColor = Color.white; // Farbe des Cursors
     public float cursorAlpha = 0.3f; // Transparenz Level 0 is vollkommen Transparent 1 ist vollkommen sichtbar
     public bool isActive = false;
@@ -38,29 +38,34 @@ public class SimpleGazeCursor : MonoBehaviour {
         HandleCursorBlink();
     }
 
-    /// <summary>
-    /// Updates the cursor based on what the camera is pointed at.
-    /// </summary>
     private void UpdateCursor()
     {
         if (targetedObjects != null && targetedObjects.Count > 0)
         {
             int currentIndex = targetedObjects.IndexOf(targetedObject);
 
-            if (currentIndex >= 0 && currentIndex < cursorRotationOffsets.Count && currentIndex < cursorOffsets.Count)
+            if (currentIndex >= 0 && currentIndex < cursorOffsets.Count)
             {
-                Vector3 cursorPosition = targetedObject.transform.position + (targetedObject.transform.up * cursorOffsets[currentIndex].y) + (targetedObject.transform.right * cursorOffsets[currentIndex].x) + (targetedObject.transform.forward * cursorOffsets[currentIndex].z);
+                // Verwende die Position des Zielobjekts als Ausgangspunkt
+                Vector3 cursorPosition = targetedObject.transform.position;
+
+                // Addiere den Offset zur Y-Koordinate der Zielobjektsposition
+                cursorPosition.y = targetedObject.transform.position.y + cursorOffsets[currentIndex].y;
+
+                // Füge den X-Offset zur X-Koordinate der Zielobjektsposition hinzu
+                cursorPosition += targetedObject.transform.right * cursorOffsets[currentIndex].x;
+
                 cursorInstance.transform.position = cursorPosition;
 
-                Quaternion targetRotation = Quaternion.LookRotation(targetedObject.transform.forward, targetedObject.transform.up) * Quaternion.Euler(cursorRotationOffsets[currentIndex]);
-                cursorInstance.transform.rotation = targetRotation;
+                // Drehe den Cursor um seine eigene Achse
+                Vector3 cursorRotation = cursorInstance.transform.localEulerAngles;
+                cursorRotation.y += rotationSpeed * Time.deltaTime;
+                cursorInstance.transform.localEulerAngles = cursorRotation;
             }
         }
     }
 
-    /// <summary>
     /// Handles the cursor blinking effect.
-    /// </summary>
     private void HandleCursorBlink()
     {
         if (cursorBlinkInterval <= 0f)
@@ -75,9 +80,7 @@ public class SimpleGazeCursor : MonoBehaviour {
         }
     }
 
-    /// <summary>
     /// Toggles the visibility of the cursor.
-    /// </summary>
     private void ToggleCursorVisibility()
     {
         if (isActive == false) {
@@ -92,9 +95,7 @@ public class SimpleGazeCursor : MonoBehaviour {
         }
     }
 
-    /// <summary>
     /// Changes the color of the cursor.
-    /// </summary>
     /// <param name="color">The new color of the cursor.</param>
     private void ChangeCursorColor(Color color)
     {
