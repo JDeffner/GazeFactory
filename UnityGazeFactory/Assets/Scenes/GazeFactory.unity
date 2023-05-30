@@ -2168,26 +2168,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd75ba5c81d1062479bfcf936b97c471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetedObject: {fileID: 1795858594}
+  targetedObject: {fileID: 857308387}
   viewCamera: {fileID: 1649192280}
-  cursorPrefab: {fileID: 1968597151943874546, guid: 5a4c035242de18d42bde1585aac115c3, type: 3}
+  cursorPrefab: {fileID: 7739231430315472403, guid: 7012cc3047d90bc43bbb1558403f4471, type: 3}
   maxCursorDistance: 30
   targetedObjects:
   - {fileID: 173548590}
   - {fileID: 1455946772}
   - {fileID: 1228560202}
   - {fileID: 1795858594}
-  cursorRotationOffsets:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 270}
-  - {x: 0, y: 0, z: 270}
-  - {x: 0, y: 0, z: 270}
+  - {fileID: 857308387}
   cursorOffsets:
-  - {x: 0, y: 0.7, z: 0}
-  - {x: 0.7, y: 0, z: 0}
-  - {x: 0.7, y: 0, z: 0}
-  - {x: 0.7, y: 0, z: 0}
+  - {x: 0, y: 0.5, z: 0}
+  - {x: 0.1, y: 0.2, z: 0}
+  - {x: 0.1, y: 0.2, z: 0}
+  - {x: 0.1, y: 0.2, z: 0}
+  - {x: 0, y: 0.2, z: 0}
   cursorBlinkInterval: 0.5
+  rotationSpeed: 50
   cursorColor: {r: 1, g: 0.6415999, b: 0, a: 1}
   cursorAlpha: 0.3
   isActive: 0
@@ -2879,7 +2877,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-27350
+  m_Name: pb_Mesh31392
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3215,7 +3213,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-28914
+  m_Name: pb_Mesh31354
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4921,7 +4919,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-46632
+  m_Name: pb_Mesh31832
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
