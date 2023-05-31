@@ -47,7 +47,15 @@ public class SimpleGazeCursor : MonoBehaviour {
 
             if (currentIndex >= 0 && currentIndex < cursorRotationOffsets.Count && currentIndex < cursorOffsets.Count)
             {
-                Vector3 cursorPosition = targetedObject.transform.position + (targetedObject.transform.up * cursorOffsets[currentIndex].y) + (targetedObject.transform.right * cursorOffsets[currentIndex].x) + (targetedObject.transform.forward * cursorOffsets[currentIndex].z);
+                // Verwende die Position des Zielobjekts als Ausgangspunkt
+                Vector3 cursorPosition = targetedObject.transform.position;
+
+                // Addiere den Offset zur Y-Koordinate der Zielobjektsposition
+                cursorPosition.y = targetedObject.transform.position.y + cursorOffsets[currentIndex].y;
+
+                // Füge den X-Offset zur X-Koordinate der Zielobjektsposition hinzu
+                cursorPosition += targetedObject.transform.right * cursorOffsets[currentIndex].x;
+
                 cursorInstance.transform.position = cursorPosition;
 
                 Quaternion targetRotation = Quaternion.LookRotation(targetedObject.transform.forward, targetedObject.transform.up) * Quaternion.Euler(cursorRotationOffsets[currentIndex]);
