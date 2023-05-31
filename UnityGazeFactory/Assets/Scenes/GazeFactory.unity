@@ -2170,23 +2170,61 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetedObject: {fileID: 857308387}
   viewCamera: {fileID: 1649192280}
-  cursorPrefab: {fileID: 7739231430315472403, guid: 7012cc3047d90bc43bbb1558403f4471, type: 3}
+  markPrefab: {fileID: 7739231430315472403, guid: 7012cc3047d90bc43bbb1558403f4471, type: 3}
+  maxMarkDistance: 30
+  targetedObjects:
+  - {fileID: 857308387}
+  - {fileID: 173548590}
+  - {fileID: 1795858594}
+  - {fileID: 1228560202}
+  - {fileID: 1455946772}
+  markOffset:
+  - {x: 0, y: 0.2, z: 0}
+  - {x: 0, y: 0.4, z: 0}
+  - {x: 0.1, y: 0.2, z: 0}
+  - {x: 0.1, y: 0.2, z: 0}
+  - {x: 0.1, y: 0.2, z: 0}
+  markBlinkIntervall: 0.5
+  rotationSpeed: 50
+  markColor: {r: 1, g: 0.26190042, b: 0.023584902, a: 1}
+  markAlpha: 0.3
+  isActive: 0
+--- !u!114 &536692657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536692651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 934b5e9069bd71d489444bf6a8994756, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetedObject: {fileID: 173548590}
+  viewCamera: {fileID: 1649192280}
+  cursorPrefab: {fileID: 1968597151943874546, guid: 5a4c035242de18d42bde1585aac115c3, type: 3}
   maxCursorDistance: 30
   targetedObjects:
   - {fileID: 173548590}
-  - {fileID: 1455946772}
-  - {fileID: 1228560202}
   - {fileID: 1795858594}
+  - {fileID: 1228560202}
+  - {fileID: 1455946772}
   - {fileID: 857308387}
+  cursorRotationOffsets:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 270}
+  - {x: 0, y: 0, z: 270}
+  - {x: 0, y: 0, z: 270}
+  - {x: 0, y: 0, z: 0}
   cursorOffsets:
-  - {x: 0, y: 0.5, z: 0}
-  - {x: 0.1, y: 0.2, z: 0}
-  - {x: 0.1, y: 0.2, z: 0}
-  - {x: 0.1, y: 0.2, z: 0}
+  - {x: 0, y: 0.7, z: 0}
+  - {x: 0.7, y: 0, z: 0}
+  - {x: 0.7, y: 0, z: 0}
+  - {x: 0.7, y: 0, z: 0}
   - {x: 0, y: 0.2, z: 0}
   cursorBlinkInterval: 0.5
-  rotationSpeed: 50
-  cursorColor: {r: 1, g: 0.6415999, b: 0, a: 1}
+  cursorColor: {r: 1, g: 0.56868994, b: 0, a: 1}
   cursorAlpha: 0.3
   isActive: 0
 --- !u!1 &549870146
@@ -2877,7 +2915,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31392
+  m_Name: pb_Mesh27048
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3213,7 +3251,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31354
+  m_Name: pb_Mesh27010
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3668,7 +3706,7 @@ GameObject:
   - component: {fileID: 857308390}
   - component: {fileID: 857308389}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: CubeForTesting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4919,7 +4957,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31832
+  m_Name: pb_Mesh27488
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

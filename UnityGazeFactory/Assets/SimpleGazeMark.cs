@@ -3,105 +3,106 @@ using System.Collections;
 using System;
 using System.Collections.Generic;
 
-public class SimpleGazeCursor : MonoBehaviour {
+public class SimpleGazeMark : MonoBehaviour {
 
     public GameObject targetedObject;
     public Camera viewCamera;
-    public GameObject cursorPrefab;
-    public float maxCursorDistance = 30;
+    public GameObject markPrefab;
+    public float maxMarkDistance = 30;
     public List<GameObject> targetedObjects; // Liste der Zielobjekte
-    public List<Vector3> cursorOffsets; // Liste der Verschiebungen für den Cursor
-    public float cursorBlinkInterval = 0.5f; // Intervall zwischen den Blink-Zustandsänderungen in Sekunden
+    public List<Vector3> markOffset; // Liste der Verschiebungen für den Mark
+    public float markBlinkIntervall = 0.5f; // Intervall zwischen den Blink-Zustandsänderungen in Sekunden
     public float rotationSpeed = 10f; // Geschwindigkeit der Rotation
-    public Color cursorColor = Color.white; // Farbe des Cursors
-    public float cursorAlpha = 0.3f; // Transparenz Level 0 is vollkommen Transparent 1 ist vollkommen sichtbar
+    public Color markColor = Color.white; // Farbe des Marks
+    public float markAlpha = 0.3f; // Transparenz Level 0 is vollkommen Transparent 1 ist vollkommen sichtbar
     public bool isActive = false;
-    private GameObject cursorInstance;
-    private bool isCursorVisible = true; // Aktueller Zustand des Cursors (sichtbar/unsichtbar)
+    private GameObject markInstance;
+    private bool isMarkVisible = true; // Aktueller Zustand des Marks (sichtbar/unsichtbar)
     private float blinkTimer = 0f; // Timer für den Blink-Effekt
-    private List<Renderer> cursorRenderers; // Liste der Renderer-Komponenten für den Cursor
+    private List<Renderer> markRendereres; // Liste der Renderer-Komponenten für den Mark
 
     // Use this for initialization
     void Start()
     {
-        cursorInstance = Instantiate(cursorPrefab);
-        cursorRenderers = new List<Renderer>(cursorInstance.GetComponentsInChildren<Renderer>());
+        markInstance = Instantiate(markPrefab
+);
+        markRendereres = new List<Renderer>(markInstance.GetComponentsInChildren<Renderer>());
 
-        // Ändere die Farbe des Cursors
-        ChangeCursorColor(cursorColor);
+        // Ändere die Farbe des Marks
+        ChangeMarkColor(markColor);
     }
 
     // Update is called once per frame
     void Update()
     {
-        UpdateCursor();
-        HandleCursorBlink();
+        UpdateMark();
+        HandleMarkBlink();
     }
 
-    private void UpdateCursor()
+    private void UpdateMark()
     {
         if (targetedObjects != null && targetedObjects.Count > 0)
         {
             int currentIndex = targetedObjects.IndexOf(targetedObject);
 
-            if (currentIndex >= 0 && currentIndex < cursorOffsets.Count)
+            if (currentIndex >= 0 && currentIndex < markOffset.Count)
             {
                 // Verwende die Position des Zielobjekts als Ausgangspunkt
-                Vector3 cursorPosition = targetedObject.transform.position;
+                Vector3 markPosition = targetedObject.transform.position;
 
                 // Addiere den Offset zur Y-Koordinate der Zielobjektsposition
-                cursorPosition.y = targetedObject.transform.position.y + cursorOffsets[currentIndex].y;
+                markPosition.y = targetedObject.transform.position.y + markOffset[currentIndex].y;
 
                 // Füge den X-Offset zur X-Koordinate der Zielobjektsposition hinzu
-                cursorPosition += targetedObject.transform.right * cursorOffsets[currentIndex].x;
+                markPosition += targetedObject.transform.right * markOffset[currentIndex].x;
 
-                cursorInstance.transform.position = cursorPosition;
+                markInstance.transform.position = markPosition;
 
-                // Drehe den Cursor um seine eigene Achse
-                Vector3 cursorRotation = cursorInstance.transform.localEulerAngles;
-                cursorRotation.y += rotationSpeed * Time.deltaTime;
-                cursorInstance.transform.localEulerAngles = cursorRotation;
+                // Drehe den Mark um seine eigene Achse
+                Vector3 markR = markInstance.transform.localEulerAngles;
+                markR.y += rotationSpeed * Time.deltaTime;
+                markInstance.transform.localEulerAngles = markR;
             }
         }
     }
 
-    /// Handles the cursor blinking effect.
-    private void HandleCursorBlink()
+    /// Handles the Mark blinking effect.
+    private void HandleMarkBlink()
     {
-        if (cursorBlinkInterval <= 0f)
+        if (markBlinkIntervall <= 0f)
             return;
 
         blinkTimer += Time.deltaTime;
 
-        if (blinkTimer >= cursorBlinkInterval)
+        if (blinkTimer >= markBlinkIntervall)
         {
-            ToggleCursorVisibility();
+            ToggleMarkVisibility();
             blinkTimer = 0f;
         }
     }
 
-    /// Toggles the visibility of the cursor.
-    private void ToggleCursorVisibility()
+    /// Toggles the visibility of the Mark.
+    private void ToggleMarkVisibility()
     {
         if (isActive == false) {
-            isCursorVisible = false;
+            isMarkVisible = false;
         } else {
-            isCursorVisible = !isCursorVisible;
+            isMarkVisible = !isMarkVisible;
         }   
 
-        foreach (Renderer renderer in cursorRenderers)
+        foreach (Renderer renderer in markRendereres)
         {
-            renderer.enabled = isCursorVisible;
+            renderer.enabled = isMarkVisible;
         }
     }
 
-    /// Changes the color of the cursor.
-    /// <param name="color">The new color of the cursor.</param>
-    private void ChangeCursorColor(Color color)
+    /// Changes the color of the Mark.
+    /// <param name="color">The new color of the Mark.</param>
+    private void ChangeMarkColor(Color color)
     {
-    color.a = cursorAlpha; // Setze den Alpha-Wert auf 0.5 für halbtransparent
+    color.a = markAlpha; // Setze den Alpha-Wert auf 0.5 für halbtransparent
 
-    foreach (Renderer renderer in cursorRenderers)
+    foreach (Renderer renderer in markRendereres)
     {
         renderer.material.color = color;
     }
