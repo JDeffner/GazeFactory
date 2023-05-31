@@ -57,9 +57,8 @@ public class SimpleGazeCursor : MonoBehaviour {
                 cursorPosition += targetedObject.transform.right * cursorOffsets[currentIndex].x;
 
                 cursorInstance.transform.position = cursorPosition;
-
-                Quaternion targetRotation = Quaternion.LookRotation(targetedObject.transform.forward, targetedObject.transform.up) * Quaternion.Euler(cursorRotationOffsets[currentIndex]);
-                cursorInstance.transform.rotation = targetRotation;
+                
+                cursorInstance.transform.rotation = Quaternion.Euler(cursorRotationOffsets[currentIndex]);
             }
         }
     }
