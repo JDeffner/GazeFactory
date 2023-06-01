@@ -6,7 +6,6 @@ using System.Collections.Generic;
 public class SimpleGazeMark : MonoBehaviour {
 
     public GameObject targetedObject;
-    public Camera viewCamera;
     public GameObject markPrefab;
     public float maxMarkDistance = 30;
     public List<GameObject> targetedObjects; // Liste der Zielobjekte
@@ -24,8 +23,7 @@ public class SimpleGazeMark : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        markInstance = Instantiate(markPrefab
-);
+        markInstance = Instantiate(markPrefab);
         markRendereres = new List<Renderer>(markInstance.GetComponentsInChildren<Renderer>());
 
         // Ändere die Farbe des Marks

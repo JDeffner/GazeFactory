@@ -6,7 +6,6 @@ using System.Collections.Generic;
 public class SimpleGazeCursor : MonoBehaviour {
 
     public GameObject targetedObject;
-    public Camera viewCamera;
     public GameObject cursorPrefab;
     public float maxCursorDistance = 30;
     public List<GameObject> targetedObjects; // Liste der Zielobjekte
