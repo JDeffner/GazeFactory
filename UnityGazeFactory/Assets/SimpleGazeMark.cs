@@ -21,8 +21,7 @@ public class SimpleGazeMark : MonoBehaviour {
     private List<Renderer> markRendereres; // Liste der Renderer-Komponenten für den Mark
 
     // Use this for initialization
-    void Start()
-    {
+    void Start() {
         markInstance = Instantiate(markPrefab);
         markRendereres = new List<Renderer>(markInstance.GetComponentsInChildren<Renderer>());
 
@@ -31,14 +30,12 @@ public class SimpleGazeMark : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         UpdateMark();
         HandleMarkBlink();
     }
 
-    private void UpdateMark()
-    {
+    private void UpdateMark() {
         if (targetedObjects != null && targetedObjects.Count > 0)
         {
             int currentIndex = targetedObjects.IndexOf(targetedObject);
@@ -65,8 +62,7 @@ public class SimpleGazeMark : MonoBehaviour {
     }
 
     /// Handles the Mark blinking effect.
-    private void HandleMarkBlink()
-    {
+    private void HandleMarkBlink() {
         if (markBlinkIntervall <= 0f)
             return;
 
@@ -80,8 +76,7 @@ public class SimpleGazeMark : MonoBehaviour {
     }
 
     /// Toggles the visibility of the Mark.
-    private void ToggleMarkVisibility()
-    {
+    private void ToggleMarkVisibility() {
         if (isActive == false) {
             isMarkVisible = false;
         } else {
@@ -104,5 +99,10 @@ public class SimpleGazeMark : MonoBehaviour {
     {
         renderer.material.color = color;
     }
+    }
+
+    /// Set targeted Object
+    public void ChangeTargetedObject(GameObject obj) {
+        targetedObject = obj;
     }
 }
