@@ -100,4 +100,13 @@ public class SimpleGazeMark : MonoBehaviour {
         renderer.material.color = color;
     }
     }
+
+    /// Set targeted Object
+    public void ChangeTargetedObject(GameObject obj) {
+        targetedObject = obj;
+    }
+
+    public void ChangeIsActive(bool inputIsActive) {
+        isActive = inputIsActive;
+    }
 }
