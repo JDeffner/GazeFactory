@@ -4729,6 +4729,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 1228560202}
+  button: {fileID: 1795858594}
+  baseMaterial: {fileID: 2100000, guid: 917dd43bda5f77747be827a50770a8f2, type: 2}
 --- !u!95 &1228560211
 Animator:
   serializedVersion: 5
