@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class NPPSimulationAnimationBehaviour : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // Reference to the Animator component
+    private Animator animator;
+    // Reference to ControllerCubeBehaviour component
+    private ControllerCubeBehaviour controllerCubeBehaviour;
+
     void Start()
     {
-        
+        // Get the Animator component
+        animator = GetComponent<Animator>();
+        // Get the ControllerCubeBehaviour component
+        controllerCubeBehaviour = GetComponent<ControllerCubeBehaviour>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        // Check if controllerCubeBehaviour and animator are not null
+        if (controllerCubeBehaviour != null && animator != null)
+        {
+            // Access SV2's status from controllerCubeBehaviour and assign to animator's parameter
+            controllerCubeBehaviour.getNPPSystemInterface().getSV2Status();
+
+        }
     }
 }
