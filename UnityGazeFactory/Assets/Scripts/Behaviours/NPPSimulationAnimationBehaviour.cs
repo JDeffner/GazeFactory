@@ -24,7 +24,8 @@ public class NPPSimulationAnimationBehaviour : MonoBehaviour
         {
             // Access SV2's status from controllerCubeBehaviour and assign to animator's parameter
             controllerCubeBehaviour.getNPPSystemInterface().getSV2Status();
-
+            bool SV2Status = animator.GetBool("SV2Status");
+            Debug.Log("Animator SV2Status: " + SV2Status.ToString());
         }
     }
 }

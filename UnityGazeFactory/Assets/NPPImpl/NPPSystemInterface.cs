@@ -429,7 +429,7 @@ namespace ConsoleApp1
 		{
 			try
 			{
-				Thread.Sleep(500);
+				// Thread.Sleep(500);
 			}
 			catch (ThreadInterruptedException e)
 			{
