@@ -51,10 +51,14 @@ public class PostProcessingController : MonoBehaviour
 
     public void setLeft() {
         vignette.center.value = new Vector2(1, vignette.center.value.y);
+        /// Just for Test Use
+        Debug.Log("setLeft");
     }
 
     public void setRight() {
         vignette.center.value = new Vector2(0, vignette.center.value.y);
+        /// Just for Test Use
+        Debug.Log("setRight");
     }
 
     /// Just for Test Use
