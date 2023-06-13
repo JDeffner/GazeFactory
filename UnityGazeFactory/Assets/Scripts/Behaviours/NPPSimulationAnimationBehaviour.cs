@@ -18,14 +18,13 @@ public class NPPSimulationAnimationBehaviour : MonoBehaviour
     }
 
     void Update()
+{
+    // Check if controllerCubeBehaviour and animator are not null
+    if (controllerCubeBehaviour != null && animator != null)
     {
-        // Check if controllerCubeBehaviour and animator are not null
-        if (controllerCubeBehaviour != null && animator != null)
-        {
-            // Access SV2's status from controllerCubeBehaviour and assign to animator's parameter
-            controllerCubeBehaviour.getNPPSystemInterface().getSV2Status();
-            bool SV2Status = animator.GetBool("SV2Status");
-            Debug.Log("Animator SV2Status: " + SV2Status.ToString());
-        }
+        // Access SV2's status from controllerCubeBehaviour and assign to animator's parameter
+        bool status = controllerCubeBehaviour.getNPPSystemInterface().getSV2Status();
+        animator.SetBool("SV2Status", status);
     }
+}
 }

@@ -22,13 +22,11 @@ public class ToggleMaterial : MonoBehaviour
         {
             this.gameObject.GetComponent<MeshRenderer>().sharedMaterial = altMaterial;
             controllerCubeBehaviour.getNPPSystemInterface().setSV2Status(true);  // Set SV2 status to true
-            Debug.Log("Button material is the base Material WRONG BUTTON");
         }
         else
         {
             this.gameObject.GetComponent<MeshRenderer>().sharedMaterial = baseMaterial;
             controllerCubeBehaviour.getNPPSystemInterface().setSV2Status(false);  // Set SV2 status to false
-            Debug.Log("Button material is NOT the base Material WRONG BUTTON");
         }
     }
 }
