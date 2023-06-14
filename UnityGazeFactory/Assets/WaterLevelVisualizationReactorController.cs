@@ -46,9 +46,11 @@ public class WaterLevelVisualizationReactorController : MonoBehaviour
             isMovingDown = true;
         }
 
-        Debug.Log("Water" + controllerCubeBehaviour.getNPPSystemInterface().getWaterLevelReactor());
+        Debug.Log("Water Reactor" + controllerCubeBehaviour.getNPPSystemInterface().getWaterLevelReactor());
         Debug.Log("RPM" + controllerCubeBehaviour.getNPPSystemInterface().getWP1RPM());
-        Debug.Log("movingDown" + isMovingDown + "isMovingUp" + isMovingUp);
-        Debug.Log("Water Condenser: " + controllerCubeBehaviour.getNPPSystemInterface().getWaterLevelCondenser());
+        //Debug.Log("Water Condenser: " + controllerCubeBehaviour.getNPPSystemInterface().getWaterLevelCondenser());
+        Debug.Log("Rod Status: " + controllerCubeBehaviour.getNPPSystemInterface().getRodPosition());
+        Debug.Log("Power: " + controllerCubeBehaviour.getNPPSystemInterface().getPowerOutlet());
+        Debug.Log("CP: " + controllerCubeBehaviour.getNPPSystemInterface().getCPRPM());
     }
 }
