@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ControllerWaterLevelUp : MonoBehaviour
+public class WP1RPMUpController : MonoBehaviour
 {
     private ControllerCubeBehaviour controllerCubeBehaviour;
 

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaterLevelVisualizationController : MonoBehaviour
+public class WaterLevelVisualizationReactorController : MonoBehaviour
 {
     private bool isMovingUp = true;
     private bool isMovingDown = true;
@@ -24,7 +24,7 @@ public class WaterLevelVisualizationController : MonoBehaviour
     void Update()
     {
         if(isMovingUp)
-            transform.Translate(Vector3.up * 1 * Time.deltaTime);
+            transform.Translate(Vector3.up * Time.deltaTime);
         if (transform.position.y > controllerCubeBehaviour.getNPPSystemInterface().getWaterLevelReactor() * 0.0005f)
         {
             isMovingUp = false;
@@ -35,7 +35,7 @@ public class WaterLevelVisualizationController : MonoBehaviour
             isMovingUp = true;
         }
         if(isMovingDown)
-            transform.Translate(Vector3.down * 1 * Time.deltaTime);
+            transform.Translate(Vector3.down * Time.deltaTime);
         if (transform.position.y < controllerCubeBehaviour.getNPPSystemInterface().getWaterLevelReactor() * 0.0005f)
         {
             isMovingDown = false;

@@ -38,9 +38,6 @@ public class SV2ButtonControl : MonoBehaviour
                 Debug.Log("Button material is NOT the base Material CHAD");
             }
         }
-        
-        controllerCubeBehaviour.getNPPSystemInterface().setWV1Status(true);
-        controllerCubeBehaviour.getNPPSystemInterface().setReactorModeratorPosition(25);
     }
 
 }
