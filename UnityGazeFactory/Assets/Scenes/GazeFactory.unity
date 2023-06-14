@@ -7452,7 +7452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd75ba5c81d1062479bfcf936b97c471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetedObject: {fileID: 1455946772}
+  targetedObject: {fileID: 1228560202}
   markPrefab: {fileID: 7739231430315472403, guid: 7012cc3047d90bc43bbb1558403f4471, type: 3}
   maxMarkDistance: 30
   targetedObjects:
