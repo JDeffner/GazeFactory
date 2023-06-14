@@ -349,13 +349,13 @@ namespace ConsoleApp1
 						tempTime = tt;
 					}
 
-					try
+/* 					try
 					{
 						Thread.Sleep(200);
 					}
 					catch (ThreadInterruptedException e)
 					{
-					}
+					} */
 				}
 			}
 
@@ -414,13 +414,13 @@ namespace ConsoleApp1
 
 		public void setSV1Status(Boolean st)
 		{
-			try
+/* 			try
 			{
 				Thread.Sleep(500);
 			}
 			catch (ThreadInterruptedException e)
 			{
-			}
+			} */
 
 			this.SV1.setStatus(st);
 		}
@@ -440,26 +440,26 @@ namespace ConsoleApp1
 
 		public void setWV1Status(Boolean st)
 		{
-			try
+/* 			try
 			{
 				Thread.Sleep(500);
 			}
 			catch (ThreadInterruptedException e)
 			{
-			}
+			} */
 
 			this.WV1.setStatus(st);
 		}
 
 		public void setWV2Status(Boolean st)
 		{
-			try
+/* 			try
 			{
 				Thread.Sleep(500);
 			}
 			catch (ThreadInterruptedException e)
 			{
-			}
+			} */
 
 			this.WV2.setStatus(st);
 		}

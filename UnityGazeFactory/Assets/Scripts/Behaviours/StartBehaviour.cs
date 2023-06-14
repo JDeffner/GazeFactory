@@ -1,6 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class State3Behaviour : StateMachineBehaviour
+public class StartBehaviour : StateMachineBehaviour 
 {
     public GameObject cursorPrefab;
     public GameObject SV2Switch;
