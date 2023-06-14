@@ -25,14 +25,12 @@ public class WV1ButtonControll : MonoBehaviour
                 this.gameObject.GetComponent<MeshRenderer>().sharedMaterial = altMaterial;
                 controllerCubeBehaviour.getNPPSystemInterface().setWV1Status(true); // Set SV2 status to true
                 animator.SetBool("WV1Status", true); // Set Animator's SV2Status to true
-                Debug.Log("Button material is the base Material DUDE");
             }
             else
             {
                 this.gameObject.GetComponent<MeshRenderer>().sharedMaterial = baseMaterial;
                 controllerCubeBehaviour.getNPPSystemInterface().setWV1Status(false); // Set SV2 status to false
                 animator.SetBool("WV1Status", false); // Set Animator's SV2Status to false
-                Debug.Log("Button material is NOT the base Material CHAD");
             }
         }
     }
