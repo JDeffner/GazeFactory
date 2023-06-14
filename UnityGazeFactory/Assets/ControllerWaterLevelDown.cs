@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class ControllerWaterLevelDown : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private ControllerCubeBehaviour controllerCubeBehaviour;
 
-    // Update is called once per frame
-    void Update()
+    void Awake()
     {
-        
+        // Get the ControllerCubeBehaviour component
+        controllerCubeBehaviour = GameObject.Find("ControllerCube").GetComponent<ControllerCubeBehaviour>();
+    }
+    
+    public void decreaseWP1RPM()
+    {
+        if (controllerCubeBehaviour.getNPPSystemInterface().getWP1RPM() > 200)
+        {
+            controllerCubeBehaviour.getNPPSystemInterface().setWP1RPM(controllerCubeBehaviour.getNPPSystemInterface().getWP1RPM() - 200);
+
+        } else controllerCubeBehaviour.getNPPSystemInterface().setWP1RPM(0);
     }
 }

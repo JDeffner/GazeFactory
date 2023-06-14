@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 using UnityEngine;
 using Valve.VR;
 using Valve.VR.InteractionSystem;
@@ -36,6 +38,9 @@ public class SV2ButtonControl : MonoBehaviour
                 Debug.Log("Button material is NOT the base Material CHAD");
             }
         }
+        
+        controllerCubeBehaviour.getNPPSystemInterface().setWV1Status(true);
+        controllerCubeBehaviour.getNPPSystemInterface().setReactorModeratorPosition(25);
     }
 
 }

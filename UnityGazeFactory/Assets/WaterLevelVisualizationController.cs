@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class WaterLevelVisualizationController : MonoBehaviour
 {
-    private bool isMoving = true;
+    private bool isMovingUp = true;
+    private bool isMovingDown = true;
     private ControllerCubeBehaviour controllerCubeBehaviour;
 
     void Awake()
@@ -22,18 +23,32 @@ public class WaterLevelVisualizationController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isMoving)
+        if(isMovingUp)
             transform.Translate(Vector3.up * 1 * Time.deltaTime);
         if (transform.position.y > controllerCubeBehaviour.getNPPSystemInterface().getWaterLevelReactor() * 0.0005f)
         {
-            isMoving = false;
+            isMovingUp = false;
         }
 
         if (transform.position.y < controllerCubeBehaviour.getNPPSystemInterface().getWaterLevelReactor() * 0.0005f)
         {
-            isMoving = true;
+            isMovingUp = true;
+        }
+        if(isMovingDown)
+            transform.Translate(Vector3.down * 1 * Time.deltaTime);
+        if (transform.position.y < controllerCubeBehaviour.getNPPSystemInterface().getWaterLevelReactor() * 0.0005f)
+        {
+            isMovingDown = false;
         }
 
-        Debug.Log(controllerCubeBehaviour.getNPPSystemInterface().getWaterLevelReactor());
+        if (transform.position.y > controllerCubeBehaviour.getNPPSystemInterface().getWaterLevelReactor() * 0.0005f)
+        {
+            isMovingDown = true;
+        }
+
+        Debug.Log("Water" + controllerCubeBehaviour.getNPPSystemInterface().getWaterLevelReactor());
+        Debug.Log("RPM" + controllerCubeBehaviour.getNPPSystemInterface().getWP1RPM());
+        Debug.Log("movingDown" + isMovingDown + "isMovingUp" + isMovingUp);
+        Debug.Log("Water Condenser: " + controllerCubeBehaviour.getNPPSystemInterface().getWaterLevelCondenser());
     }
 }
