@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7341,6 +7341,7 @@ GameObject:
   - component: {fileID: 812949802}
   - component: {fileID: 812949808}
   - component: {fileID: 812949807}
+  - component: {fileID: 812949809}
   m_Layer: 0
   m_Name: ControllerCube
   m_TagString: Untagged
@@ -7471,6 +7472,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07eb1ea32a90fd54da5898c2e5f0c479, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &812949809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812949801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd75ba5c81d1062479bfcf936b97c471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetedObject: {fileID: 812949801}
+  markPrefab: {fileID: 7739231430315472403, guid: 7012cc3047d90bc43bbb1558403f4471, type: 3}
+  maxMarkDistance: 30
+  targetedObjects:
+  - {fileID: 1930736782}
+  markOffset:
+  - {x: 0, y: 1, z: 0}
+  markBlinkIntervall: 0.5
+  rotationSpeed: 10
+  markColor: {r: 1, g: 1, b: 1, a: 1}
+  markAlpha: 0.3
+  isActive: 0
 --- !u!1 &815534238
 GameObject:
   m_ObjectHideFlags: 0
