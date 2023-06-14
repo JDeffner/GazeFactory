@@ -4086,7 +4086,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh53842
+  m_Name: pb_Mesh37658
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4552,38 +4552,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.75, z: 0}
---- !u!114 &536692656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 536692651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd75ba5c81d1062479bfcf936b97c471, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetedObject: {fileID: 857308387}
-  markPrefab: {fileID: 7739231430315472403, guid: 7012cc3047d90bc43bbb1558403f4471, type: 3}
-  maxMarkDistance: 30
-  targetedObjects:
-  - {fileID: 857308387}
-  - {fileID: 173548590}
-  - {fileID: 1795858594}
-  - {fileID: 1228560202}
-  - {fileID: 1455946772}
-  markOffset:
-  - {x: 0, y: 0.2, z: 0}
-  - {x: 0, y: 0.4, z: 0}
-  - {x: 0.1, y: 0.2, z: 0}
-  - {x: 0.1, y: 0.2, z: 0}
-  - {x: 0.1, y: 0.2, z: 0}
-  markBlinkIntervall: 0.5
-  rotationSpeed: 50
-  markColor: {r: 1, g: 0.26190042, b: 0.023584902, a: 1}
-  markAlpha: 0.3
-  isActive: 0
 --- !u!114 &536692657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7484,16 +7452,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd75ba5c81d1062479bfcf936b97c471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetedObject: {fileID: 812949801}
+  targetedObject: {fileID: 1455946772}
   markPrefab: {fileID: 7739231430315472403, guid: 7012cc3047d90bc43bbb1558403f4471, type: 3}
   maxMarkDistance: 30
   targetedObjects:
   - {fileID: 1930736782}
   markOffset:
-  - {x: 0, y: 1, z: 0}
+  - {x: -0.05, y: 0.3, z: 0}
   markBlinkIntervall: 0.5
-  rotationSpeed: 10
-  markColor: {r: 1, g: 1, b: 1, a: 1}
+  rotationSpeed: 30
+  markColor: {r: 1, g: 0.508565, b: 0, a: 1}
   markAlpha: 0.3
   isActive: 0
 --- !u!1 &815534238

@@ -12,15 +12,12 @@ public class S1Behaviour : StateMachineBehaviour
             CPRPMUp = GameObject.Find("CPRPMUp");  // Find the SV2 switch GameObject in the scene by its name
             gazeMark =  FindObjectOfType<SimpleGazeMark>();
 
-            if (CPRPMUp != null)
-            {
                 gazeMark.targetedObject = CPRPMUp;
                 gazeMark.isActive = true;
-            }
     }
-
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
+        gazeMark.isActive = false;
     }
 }
