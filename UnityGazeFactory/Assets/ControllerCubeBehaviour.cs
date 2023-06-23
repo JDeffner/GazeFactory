@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
-using ConsoleApp1;
+using NPPImpl;
 using UnityEngine;
 
 public class ControllerCubeBehaviour : MonoBehaviour
