@@ -14,7 +14,20 @@ public class ExtractRodsController : MonoBehaviour
 
     public void extractRods()
     {
+        SharedRessource.currentRodValue += 1;
          controllerCubeBehaviour.getNPPSystemInterface().setReactorModeratorPosition(
-             100 - controllerCubeBehaviour.getNPPSystemInterface().getRodPosition() + 5);
+             SharedRessource.currentRodValue);
+         SharedRessource.currentRodValue += 1;
+         controllerCubeBehaviour.getNPPSystemInterface().setReactorModeratorPosition(
+             SharedRessource.currentRodValue);
+         SharedRessource.currentRodValue += 1;
+         controllerCubeBehaviour.getNPPSystemInterface().setReactorModeratorPosition(
+             SharedRessource.currentRodValue);
+         SharedRessource.currentRodValue += 1;
+         controllerCubeBehaviour.getNPPSystemInterface().setReactorModeratorPosition(
+             SharedRessource.currentRodValue);
+         SharedRessource.currentRodValue += 1;
+         controllerCubeBehaviour.getNPPSystemInterface().setReactorModeratorPosition(
+             SharedRessource.currentRodValue);
     }
 }
