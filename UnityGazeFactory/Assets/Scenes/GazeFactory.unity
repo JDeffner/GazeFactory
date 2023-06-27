@@ -6335,18 +6335,8 @@ MonoBehaviour:
   targetedObject: {fileID: 857308387}
   markPrefab: {fileID: 7739231430315472403, guid: 7012cc3047d90bc43bbb1558403f4471, type: 3}
   maxMarkDistance: 30
-  targetedObjects:
-  - {fileID: 857308387}
-  - {fileID: 173548590}
-  - {fileID: 1795858594}
-  - {fileID: 1228560202}
-  - {fileID: 1455946772}
-  markOffset:
-  - {x: 0, y: 0.2, z: 0}
-  - {x: 0, y: 0.4, z: 0}
-  - {x: 0.1, y: 0.2, z: 0}
-  - {x: 0.1, y: 0.2, z: 0}
-  - {x: 0.1, y: 0.2, z: 0}
+  targetedObjects: []
+  markOffset: []
   markBlinkIntervall: 0.5
   rotationSpeed: 50
   markColor: {r: 1, g: 0.26190042, b: 0.023584902, a: 1}
