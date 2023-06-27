@@ -1658,7 +1658,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1827973676}
         m_TargetAssemblyTypeName: PostProcessingController, Assembly-CSharp
-        m_MethodName: setLeft
+        m_MethodName: SetLeft
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1798,7 +1798,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24636
+  m_Name: pb_Mesh27008
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3025,7 +3025,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24674
+  m_Name: pb_Mesh27046
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3452,6 +3452,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 191996, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 429506, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 429506, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 429506, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 429506, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 429506, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
@@ -6090,7 +6110,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1827973676}
         m_TargetAssemblyTypeName: PostProcessingController, Assembly-CSharp
-        m_MethodName: setInActive
+        m_MethodName: SetInActive
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6117,7 +6137,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1827973676}
         m_TargetAssemblyTypeName: PostProcessingController, Assembly-CSharp
-        m_MethodName: setActive
+        m_MethodName: SetActive
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6382,6 +6402,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   postProcessVolume: {fileID: 1827973672}
+  objectToCheck: {fileID: 173548591}
+  vrCamera: {fileID: 1649192279}
   blinkInterval: 0.5
   isBlinking: 1
   isActive: 0
@@ -6391,7 +6413,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25124
+  m_Name: pb_Mesh27498
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7179,7 +7201,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1827973676}
         m_TargetAssemblyTypeName: PostProcessingController, Assembly-CSharp
-        m_MethodName: setRight
+        m_MethodName: SetRight
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
