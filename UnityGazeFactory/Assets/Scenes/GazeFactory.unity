@@ -6367,24 +6367,9 @@ MonoBehaviour:
   targetedObject: {fileID: 173548590}
   cursorPrefab: {fileID: 1968597151943874546, guid: 5a4c035242de18d42bde1585aac115c3, type: 3}
   maxCursorDistance: 30
-  targetedObjects:
-  - {fileID: 173548590}
-  - {fileID: 1795858594}
-  - {fileID: 1228560202}
-  - {fileID: 1455946772}
-  - {fileID: 857308387}
-  cursorRotationOffsets:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 270}
-  - {x: 0, y: 0, z: 270}
-  - {x: 0, y: 0, z: 270}
-  - {x: 0, y: 0, z: 0}
-  cursorOffsets:
-  - {x: 0, y: 0.7, z: 0}
-  - {x: 0.7, y: 0, z: 0}
-  - {x: 0.7, y: 0, z: 0}
-  - {x: 0.7, y: 0, z: 0}
-  - {x: 0, y: 0.2, z: 0}
+  targetedObjects: []
+  cursorRotationOffsets: []
+  cursorOffsets: []
   cursorBlinkInterval: 0.5
   cursorColor: {r: 1, g: 0.56868994, b: 0, a: 1}
   cursorAlpha: 0.3
