@@ -46,11 +46,17 @@ public class WaterLevelVisualizationReactorController : MonoBehaviour
             isMovingDown = true;
         }
 
-        Debug.Log("Water Reactor" + controllerCubeBehaviour.getNPPSystemInterface().getWaterLevelReactor());
-        Debug.Log("RPM" + controllerCubeBehaviour.getNPPSystemInterface().getWP1RPM());
-        //Debug.Log("Water Condenser: " + controllerCubeBehaviour.getNPPSystemInterface().getWaterLevelCondenser());
+        Debug.Log("Water Reactor: " + controllerCubeBehaviour.getNPPSystemInterface().getWaterLevelReactor());
+        Debug.Log("Pressure Reactor: " + controllerCubeBehaviour.getNPPSystemInterface().getPressureReactor());
+        Debug.Log("Water Condenser : " + controllerCubeBehaviour.getNPPSystemInterface().getWaterLevelCondenser());
+        Debug.Log("Pressure Condenser: " + controllerCubeBehaviour.getNPPSystemInterface().getPressureCondenser());
+        Debug.Log("RPM: " + controllerCubeBehaviour.getNPPSystemInterface().getWP1RPM());
         Debug.Log("Rod Status: " + controllerCubeBehaviour.getNPPSystemInterface().getRodPosition());
         Debug.Log("Power: " + controllerCubeBehaviour.getNPPSystemInterface().getPowerOutlet());
-        Debug.Log("CP: " + controllerCubeBehaviour.getNPPSystemInterface().getCPRPM());
+        Debug.Log("CPRPM: " + controllerCubeBehaviour.getNPPSystemInterface().getCPRPM());
+        Debug.Log("SV1: " + controllerCubeBehaviour.getNPPSystemInterface().getSV1Status());
+        Debug.Log("SV2: " + controllerCubeBehaviour.getNPPSystemInterface().getSV2Status());
+        Debug.Log("WV1: " + controllerCubeBehaviour.getNPPSystemInterface().getWV1Status());
+        Debug.Log("WV2: " + controllerCubeBehaviour.getNPPSystemInterface().getWV2Status());
     }
 }

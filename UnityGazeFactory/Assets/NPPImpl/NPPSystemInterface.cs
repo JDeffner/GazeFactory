@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Numerics;
 using System.Threading;
+using NPPImpl.NPPcomponents;
 
-namespace ConsoleApp1
+namespace NPPImpl
 {
 
 	public class NPPSystemInterface

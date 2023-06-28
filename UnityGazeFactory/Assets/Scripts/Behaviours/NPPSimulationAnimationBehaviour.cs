@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using ConsoleApp1;
+using NPPImpl;
 
 public class NPPSimulationAnimationBehaviour : MonoBehaviour
 {
