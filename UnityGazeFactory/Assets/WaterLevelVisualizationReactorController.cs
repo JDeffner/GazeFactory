@@ -1,0 +1,62 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class WaterLevelVisualizationReactorController : MonoBehaviour
+{
+    private bool isMovingUp = true;
+    private bool isMovingDown = true;
+    private ControllerCubeBehaviour controllerCubeBehaviour;
+
+    void Awake()
+    {
+        // Get the ControllerCubeBehaviour component
+        controllerCubeBehaviour = GameObject.Find("ControllerCube").GetComponent<ControllerCubeBehaviour>();
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(isMovingUp)
+            transform.Translate(Vector3.up * Time.deltaTime);
+        if (transform.position.y > controllerCubeBehaviour.getNPPSystemInterface().getWaterLevelReactor() * 0.0005f)
+        {
+            isMovingUp = false;
+        }
+
+        if (transform.position.y < controllerCubeBehaviour.getNPPSystemInterface().getWaterLevelReactor() * 0.0005f)
+        {
+            isMovingUp = true;
+        }
+        if(isMovingDown)
+            transform.Translate(Vector3.down * Time.deltaTime);
+        if (transform.position.y < controllerCubeBehaviour.getNPPSystemInterface().getWaterLevelReactor() * 0.0005f)
+        {
+            isMovingDown = false;
+        }
+
+        if (transform.position.y > controllerCubeBehaviour.getNPPSystemInterface().getWaterLevelReactor() * 0.0005f)
+        {
+            isMovingDown = true;
+        }
+
+        Debug.Log("Water Reactor: " + controllerCubeBehaviour.getNPPSystemInterface().getWaterLevelReactor());
+        Debug.Log("Pressure Reactor: " + controllerCubeBehaviour.getNPPSystemInterface().getPressureReactor());
+        Debug.Log("Water Condenser : " + controllerCubeBehaviour.getNPPSystemInterface().getWaterLevelCondenser());
+        Debug.Log("Pressure Condenser: " + controllerCubeBehaviour.getNPPSystemInterface().getPressureCondenser());
+        Debug.Log("RPM: " + controllerCubeBehaviour.getNPPSystemInterface().getWP1RPM());
+        Debug.Log("Rod Status: " + controllerCubeBehaviour.getNPPSystemInterface().getRodPosition());
+        Debug.Log("Power: " + controllerCubeBehaviour.getNPPSystemInterface().getPowerOutlet());
+        Debug.Log("CPRPM: " + controllerCubeBehaviour.getNPPSystemInterface().getCPRPM());
+        Debug.Log("SV1: " + controllerCubeBehaviour.getNPPSystemInterface().getSV1Status());
+        Debug.Log("SV2: " + controllerCubeBehaviour.getNPPSystemInterface().getSV2Status());
+        Debug.Log("WV1: " + controllerCubeBehaviour.getNPPSystemInterface().getWV1Status());
+        Debug.Log("WV2: " + controllerCubeBehaviour.getNPPSystemInterface().getWV2Status());
+    }
+}

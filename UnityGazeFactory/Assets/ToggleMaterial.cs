@@ -5,25 +5,28 @@ using Valve.VR;
 using Valve.VR.InteractionSystem;
 public class ToggleMaterial : MonoBehaviour
 {
-    //public GameObject objToChange;
     public Material baseMaterial;
     public Material altMaterial;
 
-    // Start is called before the first frame update
-    public void updateButtonMaterial(){
-        if (this.gameObject.GetComponent<MeshRenderer>().sharedMaterial == baseMaterial) {
-            this.gameObject.GetComponent<MeshRenderer>().sharedMaterial = altMaterial;
-            Debug.Log("Button material is the base Material");
-        }
-            
-        else{
-            Debug.Log("Button material is NOT the base Material");
-            this.gameObject.GetComponent<MeshRenderer>().sharedMaterial = baseMaterial;
-        }
-    }
-    void Start()
+    private ControllerCubeBehaviour controllerCubeBehaviour;
+
+    void Awake()
     {
-
+        // Get the ControllerCubeBehaviour component
+        controllerCubeBehaviour = GameObject.Find("ControllerCube").GetComponent<ControllerCubeBehaviour>();
     }
 
+    public void updateButtonMaterial()
+    {
+        if (this.gameObject.GetComponent<MeshRenderer>().sharedMaterial == baseMaterial)
+        {
+            this.gameObject.GetComponent<MeshRenderer>().sharedMaterial = altMaterial;
+            controllerCubeBehaviour.getNPPSystemInterface().setSV2Status(true);  // Set SV2 status to true
+        }
+        else
+        {
+            this.gameObject.GetComponent<MeshRenderer>().sharedMaterial = baseMaterial;
+            controllerCubeBehaviour.getNPPSystemInterface().setSV2Status(false);  // Set SV2 status to false
+        }
+    }
 }

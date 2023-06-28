@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConsoleApp1
+namespace NPPImpl.NPPcomponents
 {
 
     public class SteamValve : Component

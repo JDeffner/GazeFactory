@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
 
-namespace ConsoleApp1
+namespace NPPImpl.NPPcomponents
 {
 
 	public class Reactor : Component
