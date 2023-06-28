@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class S1Behaviour : StateMachineBehaviour
+public class S2Behaviour : StateMachineBehaviour
 {
-    public GameObject CPRPMUp;
+    public GameObject WV1Switch;
     private SimpleGazeMark gazeMark;
 
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
-            CPRPMUp = GameObject.Find("CPRPMUp");
+            WV1Switch = GameObject.Find("WV1Switch");
             gazeMark =  FindObjectOfType<SimpleGazeMark>();
 
-                gazeMark.targetedObject = CPRPMUp;
+                gazeMark.targetedObject = WV1Switch;
                 gazeMark.isActive = true;
     }
 
