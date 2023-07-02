@@ -9345,7 +9345,6 @@ GameObject:
   - component: {fileID: 812949802}
   - component: {fileID: 812949808}
   - component: {fileID: 812949807}
-  - component: {fileID: 812949809}
   m_Layer: 0
   m_Name: ControllerCube
   m_TagString: Untagged
@@ -9476,30 +9475,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07eb1ea32a90fd54da5898c2e5f0c479, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &812949809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 812949801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd75ba5c81d1062479bfcf936b97c471, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetedObject: {fileID: 1228560202}
-  markPrefab: {fileID: 7739231430315472403, guid: 7012cc3047d90bc43bbb1558403f4471, type: 3}
-  maxMarkDistance: 30
-  targetedObjects:
-  - {fileID: 1930736782}
-  markOffset:
-  - {x: -0.05, y: 0.3, z: 0}
-  markBlinkIntervall: 0.5
-  rotationSpeed: 30
-  markColor: {r: 1, g: 0.508565, b: 0, a: 1}
-  markAlpha: 0.3
-  isActive: 0
 --- !u!1 &815534238
 GameObject:
   m_ObjectHideFlags: 0
@@ -17536,7 +17511,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1827973671}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
