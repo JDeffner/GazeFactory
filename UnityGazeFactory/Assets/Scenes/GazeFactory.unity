@@ -5506,7 +5506,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28902
+  m_Name: pb_Mesh25148
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8725,7 +8725,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28618
+  m_Name: pb_Mesh24864
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17605,16 +17605,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   postProcessVolume: {fileID: 1827973672}
-  objectToCheck: {fileID: 173548591}
-  targetedObject: {fileID: 173548590}
+  targetedObject: {fileID: 1232719338}
   vrCamera: {fileID: 1649192279}
   blinkInterval: 0.5
   isBlinking: 1
   isActive: 0
-  targetedObjects:
-  - {fileID: 173548590}
-  VisionAngle:
-  - 65
   DebugMode: 0
 --- !u!1 &1891461287
 GameObject:

@@ -7,7 +7,7 @@ public class PostProcessingController : MonoBehaviour
     // Vignette
     public PostProcessVolume postProcessVolume;
     private Vignette vignette;
-    public Transform objectToCheck;
+    private Transform objectToCheck;
     public GameObject targetedObject;
     public Transform vrCamera;
     public float blinkInterval = 0.5f; 
@@ -15,17 +15,16 @@ public class PostProcessingController : MonoBehaviour
     public bool isBlinking = true;
     public bool isActive = false;
     private bool isOnObject = false;
-    public List<GameObject> targetedObjects;
-    public List<float> VisionAngle;
     public bool DebugMode = false;
     
-    private void Start()
+    private void Start() 
     {
         postProcessVolume.profile.TryGetSettings(out vignette);
     }
 
     private void Update()
     {
+        objectToCheck = targetedObject.transform;
         CheckAngle();
         if(isBlinking && isActive && !isOnObject) {
             timer += Time.deltaTime;
@@ -98,10 +97,9 @@ public class PostProcessingController : MonoBehaviour
 
     public void CheckVision(float angle)
     {
-        if (targetedObjects != null && targetedObjects.Count > 0)
-        {
-            int currentIndex = targetedObjects.IndexOf(targetedObject);
-            if (angle < VisionAngle[currentIndex] && angle > VisionAngle[currentIndex] * (-1))
+            float distanz = Vector3.Distance(vrCamera.position, objectToCheck.position);
+            if(DebugMode) Debug.Log("Distanz: " + distanz);
+            if (angle < 31 && angle > 31  * (-1))
             {
                 isOnObject = true;
                 if(DebugMode) Debug.Log("IsOnObject");
@@ -111,6 +109,5 @@ public class PostProcessingController : MonoBehaviour
                 isOnObject = false;
                 if(DebugMode) Debug.Log("IsNotOnObject");
             }
-        }
     }
 }
