@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class S1Behaviour : StateMachineBehaviour
@@ -10,21 +8,21 @@ public class S1Behaviour : StateMachineBehaviour
     
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
-            // Set targeted Object
-            targetedObject = GameObject.Find("CPRPMUp");  // Mark CRPMUp
-            // Find GazeGuiding Components
-            gazeMark =  FindObjectOfType<SimpleGazeMark>();
-            postController = FindObjectOfType<PostProcessingController>();
-            // Change Targeted Objects
-            gazeMark.targetedObject = targetedObject;
-            postController.targetedObject = targetedObject;
-            // Set GazeGuiding active
-            gazeMark.isActive = true;
-            postController.isActive = true;
+        // Set targeted Object
+        targetedObject = GameObject.Find("CPRPMUp"); 
+        // Find GazeGuiding Components
+        gazeMark =  FindObjectOfType<SimpleGazeMark>();
+        postController = FindObjectOfType<PostProcessingController>();
+        // Change Targeted Objects
+        gazeMark.targetedObject = targetedObject;
+        postController.targetedObject = targetedObject;
+        // Set GazeGuiding active
+        gazeMark.isActive = true;
+        postController.isActive = true;
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
-        gazeMark.isActive = false;
+        // gazeMark.isActive = false;
     }
 }
