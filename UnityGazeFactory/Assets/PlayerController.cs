@@ -18,7 +18,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            characterController.center = new Vector3(vrCameraTransform.localPosition.x, characterController.center.y, vrCameraTransform.localPosition.z);
+            //Playspace clip through remover
+            //characterController.center = new Vector3(vrCameraTransform.localPosition.x, characterController.center.y, vrCameraTransform.localPosition.z);
 
             Vector3 trueDirectionVector = Player.instance.hmdTransform.TransformDirection(new Vector3(inputMovementVector.axis.x, 0, inputMovementVector.axis.y));
             Vector3 gravityVector = new Vector3(0, 9.81f,0);
