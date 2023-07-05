@@ -14,9 +14,10 @@ public class CPRPMDownController : MonoBehaviour
 
     public void decreaseCPRPM()
     {
-        if (controllerCubeBehaviour.getNPPSystemInterface().getCPRPM() > 200)
+        if (controllerCubeBehaviour.getNPPSystemInterface().getCPRPM() > 400)
         {
-            controllerCubeBehaviour.getNPPSystemInterface().setCPRPM(controllerCubeBehaviour.getNPPSystemInterface().getCPRPM() - 200);
+            SharedRessource.currentCPRPMValue -= 400;
+            controllerCubeBehaviour.getNPPSystemInterface().setCPRPM(SharedRessource.currentCPRPMValue);
 
         } else controllerCubeBehaviour.getNPPSystemInterface().setCPRPM(0);
     }
