@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StartBehaviour : StateMachineBehaviour
+public class S4Behaviour : StateMachineBehaviour
 {
     public GameObject SV2Switch;
     private SimpleGazeMark gazeMark;

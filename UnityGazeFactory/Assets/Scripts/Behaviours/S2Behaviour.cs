@@ -4,16 +4,23 @@ using UnityEngine;
 
 public class S2Behaviour : StateMachineBehaviour
 {
-    public GameObject WV1Switch;
+    private GameObject targetedObject;
     private SimpleGazeMark gazeMark;
+    private PostProcessingController postController;
 
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
-            WV1Switch = GameObject.Find("WV1Switch");
-            gazeMark =  FindObjectOfType<SimpleGazeMark>();
-
-                gazeMark.targetedObject = WV1Switch;
-                gazeMark.isActive = true;
+        // Set targeted Object
+        targetedObject = GameObject.Find("WV1Switch");  // Mark CRPMUp
+        // Find GazeGuiding Components
+        gazeMark =  FindObjectOfType<SimpleGazeMark>();
+        postController = FindObjectOfType<PostProcessingController>();
+        // Change Targeted Objects
+        gazeMark.targetedObject = targetedObject;
+        postController.targetedObject = targetedObject;
+        // Set GazeGuiding active
+        gazeMark.isActive = true;
+        postController.isActive = true;
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 

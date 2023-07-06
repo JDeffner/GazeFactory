@@ -18,6 +18,6 @@ public class S1Behaviour : StateMachineBehaviour
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
-        gazeMark.isActive = false;
+        //gazeMark.isActive = false;
     }
 }
