@@ -1,23 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class S1Behaviour : StateMachineBehaviour
 {
-    public GameObject CPRPMUp;
+    private GameObject targetedObject;
     private SimpleGazeMark gazeMark;
-
+    private PostProcessingController postController;
+    
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
-            CPRPMUp = GameObject.Find("CPRPMUp");
-            gazeMark =  FindObjectOfType<SimpleGazeMark>();
-
-                gazeMark.targetedObject = CPRPMUp;
-                gazeMark.isActive = true;
+        // Set targeted Object
+        targetedObject = GameObject.Find("CPRPMUp"); 
+        // Find GazeGuiding Components
+        gazeMark =  FindObjectOfType<SimpleGazeMark>();
+        postController = FindObjectOfType<PostProcessingController>();
+        // Change Targeted Objects
+        gazeMark.targetedObject = targetedObject;
+        postController.targetedObject = targetedObject;
+        // Set GazeGuiding active
+        gazeMark.isActive = true;
+        postController.isActive = true;
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
-        //gazeMark.isActive = false;
+        // gazeMark.isActive = false;
     }
 }

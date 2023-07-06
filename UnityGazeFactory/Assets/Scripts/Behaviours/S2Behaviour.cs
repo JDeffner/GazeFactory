@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class S2Behaviour : StateMachineBehaviour
@@ -7,11 +5,11 @@ public class S2Behaviour : StateMachineBehaviour
     private GameObject targetedObject;
     private SimpleGazeMark gazeMark;
     private PostProcessingController postController;
-
+    
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
         // Set targeted Object
-        targetedObject = GameObject.Find("WV1Switch");  // Mark CRPMUp
+        targetedObject = GameObject.Find("WV1Switch"); 
         // Find GazeGuiding Components
         gazeMark =  FindObjectOfType<SimpleGazeMark>();
         postController = FindObjectOfType<PostProcessingController>();
@@ -25,6 +23,6 @@ public class S2Behaviour : StateMachineBehaviour
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
-        gazeMark.isActive = false;
+        // gazeMark.isActive = false;
     }
 }

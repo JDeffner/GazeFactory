@@ -14,9 +14,10 @@ public class CPRPMUpController : MonoBehaviour
     
     public void increaseCPRPM()
     {
-        if (controllerCubeBehaviour.getNPPSystemInterface().getCPRPM() < 2000)
+        if (controllerCubeBehaviour.getNPPSystemInterface().getCPRPM() < 1601)
         {
-            controllerCubeBehaviour.getNPPSystemInterface().setCPRPM(controllerCubeBehaviour.getNPPSystemInterface().getCPRPM() + 200);
+            SharedRessource.currentCPRPMValue += 400;
+            controllerCubeBehaviour.getNPPSystemInterface().setCPRPM(SharedRessource.currentCPRPMValue);
 
         } else controllerCubeBehaviour.getNPPSystemInterface().setCPRPM(2000);
     }
