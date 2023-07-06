@@ -1,18 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ResetBehaviour : MonoBehaviour
+public class ResetBehaviour : StateMachineBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private GameObject targetedObject;
+    private SimpleGazeMark gazeMark;
+    private PostProcessingController postController;
+    
+    public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
-        
+
+        postController.isActive = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
-        
+        // gazeMark.isActive = false;
     }
 }

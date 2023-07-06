@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class S6Behaviour : StateMachineBehaviour
+public class WaterLowBehaviour : StateMachineBehaviour
 {
     private GameObject targetedObject;
     private SimpleGazeMark gazeMark;
@@ -8,6 +8,7 @@ public class S6Behaviour : StateMachineBehaviour
     
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
+        gazeMark.isActive = false;
         // Set targeted Object
         targetedObject = GameObject.Find("ExtractRodsButton");
         // Find GazeGuiding Components

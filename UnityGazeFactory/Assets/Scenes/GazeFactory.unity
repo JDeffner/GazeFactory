@@ -24896,6 +24896,7 @@ MonoBehaviour:
   - {fileID: 215916340}
   - {fileID: 1654835837}
   - {fileID: 1019343368}
+  - {fileID: 289478238}
   markOffset:
   - {x: 0, y: 0.2, z: 0}
   - {x: 0.05, y: 0.2, z: 0}
@@ -24903,6 +24904,7 @@ MonoBehaviour:
   - {x: 0.05, y: 0.2, z: 0}
   - {x: 0.05, y: 0.2, z: 0}
   - {x: 0, y: 0.2, z: 0}
+  - {x: 0.05, y: 0.2, z: 0}
   markBlinkIntervall: 0.5
   rotationSpeed: 50
   markColor: {r: 1, g: 0.26190042, b: 0.023584902, a: 1}
