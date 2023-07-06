@@ -7,7 +7,7 @@ public class PostProcessingController : MonoBehaviour
     // public Section
     public PostProcessVolume postProcessVolume;
     public GameObject targetedObject;
-    public Transform vrCamera;
+    public Camera vrCameraObject;
     public float blinkInterval = 0.5f;
     public bool isBlinking = true;
     public bool isActive = false;
@@ -22,10 +22,12 @@ public class PostProcessingController : MonoBehaviour
     private Transform objectToCheck;
     private float timer = 0f;
     private bool isOnObject = false;
-    
+    private Transform vrCamera;
+
     private void Start() 
     {
         postProcessVolume.profile.TryGetSettings(out vignette);
+        vrCamera = vrCameraObject.transform;
     }
 
     private void Update()
@@ -82,28 +84,18 @@ public class PostProcessingController : MonoBehaviour
 
     public void CheckVision()
     {
-            // Zeichne eine Linie auf der Mitte der VRCamera
-            Vector3 cameraPosition = vrCamera.position;
-            Vector3 cameraForward = vrCamera.forward;
-            Vector3 lineEndPosition = cameraPosition + cameraForward * 10f; // Länge der Linie (10f) anpassen, falls erforderlich
-            if(DebugMode) Debug.DrawLine(cameraPosition, lineEndPosition, Color.red);
-            
-            // Berechne den Winkel zwischen der Linie und dem Zielobjekt
-            Vector3 objectPosition = objectToCheck.position;
-            Vector2 cameraToObjDirection = new Vector2(objectPosition.x - cameraPosition.x, objectPosition.z - cameraPosition.z);
-            Vector2 cameraForwardDirection = new Vector2(cameraForward.x, cameraForward.z);
-            float angle = Vector2.SignedAngle(cameraForwardDirection, cameraToObjDirection);
-            
-            // Wenn der Winkel von Kamera Mitte zu Objekt (nur x und z Koordinaten) mehr als 31 vom Objekt abweicht dann ist wird PostProcessing aktiv
-            if (angle < 31 && angle > 31  * (-1))
-            {
-                isOnObject = true;
-                if(DebugMode) Debug.Log("IsOnObject");
-            }
-            else
-            {
-                isOnObject = false;
-                if(DebugMode) Debug.Log("IsNotOnObject");
-            }
+        Plane[] cameraFrustum = GeometryUtility.CalculateFrustumPlanes(vrCameraObject);
+        Collider collider = targetedObject.GetComponent<Collider>();
+        var bounds = collider.bounds;
+        if (GeometryUtility.TestPlanesAABB(cameraFrustum, bounds))
+        {
+            isOnObject = true;
+            if(DebugMode) Debug.Log("IsOnObject");
+        }
+        else
+        {
+            isOnObject = false;
+            if(DebugMode) Debug.Log("IsNotOnObject");
+        }
     }
 }

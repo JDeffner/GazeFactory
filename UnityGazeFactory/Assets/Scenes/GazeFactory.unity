@@ -22311,6 +22311,11 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!20 &1649192287 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2014920, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+  m_PrefabInstance: {fileID: 822762744}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1654835837
 GameObject:
   m_ObjectHideFlags: 0
@@ -24944,7 +24949,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   postProcessVolume: {fileID: 1827973672}
   targetedObject: {fileID: 1232719338}
-  vrCamera: {fileID: 1649192279}
+  vrCameraObject: {fileID: 1649192287}
   blinkInterval: 0.5
   isBlinking: 1
   isActive: 1
