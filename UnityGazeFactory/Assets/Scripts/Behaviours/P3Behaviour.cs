@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class StartBehaviour : StateMachineBehaviour
+public class P3Behaviour : StateMachineBehaviour
 {
     private GameObject targetedObject;
     private SimpleGazeMark gazeMark;
@@ -9,7 +9,7 @@ public class StartBehaviour : StateMachineBehaviour
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
         // Set targeted Object
-        targetedObject = GameObject.Find("SV2Switch");
+        targetedObject = GameObject.Find("SV1Switch");
         // Find GazeGuiding Components
         gazeMark =  FindObjectOfType<SimpleGazeMark>();
         postController = FindObjectOfType<PostProcessingController>();

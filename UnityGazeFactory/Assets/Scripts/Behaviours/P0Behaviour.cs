@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class StartBehaviour : StateMachineBehaviour
+public class P0Behaviour : StateMachineBehaviour
 {
     private GameObject targetedObject;
     private SimpleGazeMark gazeMark;
