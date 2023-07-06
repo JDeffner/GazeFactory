@@ -24,16 +24,16 @@ MonoBehaviour:
     value: {r: 1, g: 0.20779696, b: 0, a: 1}
   center:
     overrideState: 1
-    value: {x: 0.95, y: 0.5}
+    value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
     value: 0.4
   smoothness:
     overrideState: 1
-    value: 0.337
+    value: 0.03
   roundness:
     overrideState: 1
-    value: 0
+    value: 0.619
   rounded:
     overrideState: 0
     value: 0

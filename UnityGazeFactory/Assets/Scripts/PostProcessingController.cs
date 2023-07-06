@@ -4,18 +4,24 @@ using UnityEngine.Rendering.PostProcessing;
 
 public class PostProcessingController : MonoBehaviour
 {
-    // Vignette
+    // public Section
     public PostProcessVolume postProcessVolume;
-    private Vignette vignette;
-    private Transform objectToCheck;
     public GameObject targetedObject;
     public Transform vrCamera;
-    public float blinkInterval = 0.5f; 
-    private float timer = 0f; 
+    public float blinkInterval = 0.5f;
     public bool isBlinking = true;
     public bool isActive = false;
-    private bool isOnObject = false;
     public bool DebugMode = false;
+    
+    [SerializeField] 
+    [Range(0, 1)]
+    private float vignetteOffset = 0.1f;
+    
+    // private Section
+    private Vignette vignette;
+    private Transform objectToCheck;
+    private float timer = 0f;
+    private bool isOnObject = false;
     
     private void Start() 
     {
@@ -25,41 +31,13 @@ public class PostProcessingController : MonoBehaviour
     private void Update()
     {
         objectToCheck = targetedObject.transform;
+        checkBlink();
         CheckAngle();
-        if(isBlinking && isActive && !isOnObject) {
-            timer += Time.deltaTime;
-
-            if (timer >= blinkInterval)
-            {
-                if (vignette.intensity.value == 0f)
-                {
-                    vignette.intensity.value = 0.4f;
-                }
-                else
-                {
-                    vignette.intensity.value = 0f;
-                }
-
-                timer = 0f;
-            }
-        } else {
-            if (isOnObject) vignette.intensity.value = 0f;
-            if(!isActive) vignette.intensity.value = 0f;
-        }
-    }
-
-    public void SetActive() {
-        isActive = true;
-        vignette.intensity.value = 0.4f;
-    }
-
-    public void SetInActive() {
-        isActive = false;
-        vignette.intensity.value = 0f;
+        CheckVision();
     }
 
     public void SetLeft() {
-        vignette.center.value = new Vector2(0.95f, vignette.center.value.y);
+        vignette.center.value = new Vector2(1f, vignette.center.value.y);
         if(DebugMode) Debug.Log("setLeft");
     }
 
@@ -68,37 +46,55 @@ public class PostProcessingController : MonoBehaviour
         if(DebugMode) Debug.Log("setRight");
     }
 
-    public void CheckAngle() {
-        // Zeichne eine Linie auf der Mitte der VRCamera
-        Vector3 cameraPosition = vrCamera.position;
-        Vector3 cameraForward = vrCamera.forward;
-        Vector3 lineEndPosition = cameraPosition + cameraForward * 10f; // Länge der Linie (10f) anpassen, falls erforderlich
-        if(DebugMode) Debug.DrawLine(cameraPosition, lineEndPosition, Color.red);
-        
-        // Berechne den Winkel zwischen der Linie und dem Zielobjekt
-        Vector3 objectPosition = objectToCheck.position;
-        Vector2 cameraToObjDirection = new Vector2(objectPosition.x - cameraPosition.x, objectPosition.z - cameraPosition.z);
-        Vector2 cameraForwardDirection = new Vector2(cameraForward.x, cameraForward.z);
-        float angle = Vector2.SignedAngle(cameraForwardDirection, cameraToObjDirection);
-        
-        if(DebugMode) Debug.Log("Winkel zum Objekt: " + angle);
-        if (angle < 0)
-        {
-            SetRight();
-            if(DebugMode) Debug.Log("SetRight");
+    public void checkBlink() {
+        if(isBlinking && isActive && !isOnObject) {
+            timer += Time.deltaTime;
+
+            if (timer >= blinkInterval)
+            {
+                if (postProcessVolume.enabled == false)
+                {
+                    postProcessVolume.enabled = true;
+                }
+                else
+                {
+                    postProcessVolume.enabled = false;
+                }
+
+                timer = 0f;
+            }
+        } else {
+            if(isOnObject) postProcessVolume.enabled = false;
+            if(!isActive) postProcessVolume.enabled = false;
         }
-        else
-        {
-            SetLeft();
-            if(DebugMode) Debug.Log("SetLeft");
-        }
-        CheckVision(angle);
     }
 
-    public void CheckVision(float angle)
+    public void CheckAngle() {
+        // Berechne die Position der Vignette relativ zur Kamera
+        Vector3 objectPosition = objectToCheck.position;
+        Vector4 viewPos = vrCamera.worldToLocalMatrix * new Vector4(objectPosition.x, objectPosition.y, objectPosition.z, 1);
+        Vector2 dir = new Vector2(viewPos.x, viewPos.y);
+        
+        if(DebugMode) Debug.Log(dir);
+        
+        vignette.center.value = new Vector2(0.5f, 0.5f) + -dir.normalized * vignetteOffset;
+    }
+
+    public void CheckVision()
     {
-            float distanz = Vector3.Distance(vrCamera.position, objectToCheck.position);
-            if(DebugMode) Debug.Log("Distanz: " + distanz);
+            // Zeichne eine Linie auf der Mitte der VRCamera
+            Vector3 cameraPosition = vrCamera.position;
+            Vector3 cameraForward = vrCamera.forward;
+            Vector3 lineEndPosition = cameraPosition + cameraForward * 10f; // Länge der Linie (10f) anpassen, falls erforderlich
+            if(DebugMode) Debug.DrawLine(cameraPosition, lineEndPosition, Color.red);
+            
+            // Berechne den Winkel zwischen der Linie und dem Zielobjekt
+            Vector3 objectPosition = objectToCheck.position;
+            Vector2 cameraToObjDirection = new Vector2(objectPosition.x - cameraPosition.x, objectPosition.z - cameraPosition.z);
+            Vector2 cameraForwardDirection = new Vector2(cameraForward.x, cameraForward.z);
+            float angle = Vector2.SignedAngle(cameraForwardDirection, cameraToObjDirection);
+            
+            // Wenn der Winkel von Kamera Mitte zu Objekt (nur x und z Koordinaten) mehr als 31 vom Objekt abweicht dann ist wird PostProcessing aktiv
             if (angle < 31 && angle > 31  * (-1))
             {
                 isOnObject = true;
