@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class S6Behaviour : MonoBehaviour
+public class S6Behaviour : StateMachineBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject ExtractRodsButton;
+    private SimpleGazeMark gazeMark;
+
+    public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
-        
+            ExtractRodsButton = GameObject.Find("ExtractRodsButton");
+            gazeMark =  FindObjectOfType<SimpleGazeMark>();
+
+                gazeMark.targetedObject = ExtractRodsButton;
+                gazeMark.isActive = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
-        
+        //gazeMark.isActive = false;
     }
 }
