@@ -9,7 +9,7 @@ public class S4Behaviour : StateMachineBehaviour
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
         // Set targeted Object
-        targetedObject = GameObject.Find("SV2Switch"); 
+        targetedObject = GameObject.Find("SV1Switch"); 
         // Find GazeGuiding Components
         gazeMark =  FindObjectOfType<SimpleGazeMark>();
         postController = FindObjectOfType<PostProcessingController>();
