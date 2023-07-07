@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -24898,17 +24898,17 @@ MonoBehaviour:
   - {fileID: 1019343368}
   - {fileID: 289478238}
   markOffset:
-  - {x: 0, y: 0.2, z: 0}
-  - {x: 0.05, y: 0.2, z: 0}
-  - {x: 0, y: 0.2, z: 0}
-  - {x: 0.05, y: 0.2, z: 0}
-  - {x: 0.05, y: 0.2, z: 0}
-  - {x: 0, y: 0.2, z: 0}
-  - {x: 0.05, y: 0.2, z: 0}
+  - {x: 0, y: 0.15, z: 0}
+  - {x: 0.05, y: 0.15, z: 0}
+  - {x: 0, y: 0.15, z: 0}
+  - {x: 0.05, y: 0.15, z: 0}
+  - {x: 0.05, y: 0.15, z: 0}
+  - {x: 0, y: 0.15, z: 0}
+  - {x: 0.05, y: 0.15, z: 0}
   markBlinkIntervall: 0.5
   rotationSpeed: 50
   markColor: {r: 1, g: 0.26190042, b: 0.023584902, a: 1}
-  markAlpha: 0.3
+  markAlpha: 0.7
   isActive: 0
 --- !u!114 &1827973675
 MonoBehaviour:
@@ -24948,11 +24948,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   postProcessVolume: {fileID: 1827973672}
   targetedObject: {fileID: 1232719338}
-  vrCamera: {fileID: 1649192279}
+  vrCameraObject: {fileID: 0}
   blinkInterval: 0.5
   isBlinking: 1
   isActive: 1
   DebugMode: 0
+  vignetteOffset: 0.1
 --- !u!1 &1891461287
 GameObject:
   m_ObjectHideFlags: 0
