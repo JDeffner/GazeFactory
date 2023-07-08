@@ -14,8 +14,8 @@ public class SimpleGazeText : MonoBehaviour
 
     void Start()
     {
-        canvas.transform.localScale =
-            new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        canvas.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        text = "Test \n ist \n gelungen!!!!"; // Test Text
     }
     
     void Update()
