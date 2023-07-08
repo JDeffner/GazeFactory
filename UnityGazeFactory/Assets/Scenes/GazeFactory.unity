@@ -25141,8 +25141,9 @@ MonoBehaviour:
   vrCamera: {fileID: 1649192287}
   targetedObject: {fileID: 1930736782}
   canvas: {fileID: 1017037209}
-  text: 
+  text: Test ist gelungen
   textColor: 
+  textSize: 0.03
   targetedObjects:
   - {fileID: 1930736782}
   textOffset:
