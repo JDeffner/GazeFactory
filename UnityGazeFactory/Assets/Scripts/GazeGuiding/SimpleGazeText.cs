@@ -8,6 +8,7 @@ public class SimpleGazeText : MonoBehaviour
     public Canvas canvas;
     public string text;
     public string textColor;
+    public float textSize;
     public List<GameObject> targetedObjects; 
     public List<Vector3> textOffset;
     public bool isActive;
@@ -15,7 +16,6 @@ public class SimpleGazeText : MonoBehaviour
     void Start()
     {
         canvas.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-        text = "Test \n ist \n gelungen!!!!"; // Test Text
     }
     
     void Update()
@@ -55,6 +55,7 @@ public class SimpleGazeText : MonoBehaviour
     private void editCanvas()
     {
         canvas.GetComponent<TextMesh>().text = text;
+        canvas.GetComponent<TextMesh>().characterSize = textSize;
         
         Color color;
         if (ColorUtility.TryParseHtmlString(textColor, out color))
