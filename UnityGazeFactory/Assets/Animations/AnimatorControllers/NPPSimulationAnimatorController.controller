@@ -122,7 +122,7 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 4
     m_ConditionEvent: RodPosition
-    m_EventTreshold: 100
+    m_EventTreshold: 95
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8061038075495211079}
   m_Solo: 0
@@ -245,6 +245,34 @@ AnimatorStateTransition:
   m_TransitionOffset: 0
   m_ExitTime: 0.75
   m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &-8924191025942056994
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 4
+    m_ConditionEvent: WP1RPM
+    m_EventTreshold: 200
+  - m_ConditionMode: 6
+    m_ConditionEvent: CPRPM
+    m_EventTreshold: 1600
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -4634465625042948463}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -586,7 +614,7 @@ AnimatorState:
   - {fileID: -6024747925428200501}
   - {fileID: -9087024211655224882}
   - {fileID: -7033575179140238156}
-  - {fileID: -7963964108709505592}
+  - {fileID: 6518992994873491061}
   m_StateMachineBehaviours:
   - {fileID: 2355398886839895765}
   m_Position: {x: 50, y: 50, z: 0}
@@ -679,9 +707,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: WV2Status
     m_EventTreshold: 0
-  - m_ConditionMode: 4
+  - m_ConditionMode: 6
     m_ConditionEvent: WP1RPM
-    m_EventTreshold: 201
+    m_EventTreshold: 200
   - m_ConditionMode: 6
     m_ConditionEvent: WP2RPM
     m_EventTreshold: 0
@@ -691,9 +719,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: CPRPM
     m_EventTreshold: 1600
-  - m_ConditionMode: 4
-    m_ConditionEvent: WaterLevelReactor
-    m_EventTreshold: 2150
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -122541294812431342}
   m_Solo: 0
@@ -977,7 +1002,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 'f3_5: Rods are extracted'
+  m_Name: 'f3_5: Rods less 95'
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -990,7 +1015,7 @@ AnimatorState:
   - {fileID: -3435289406858062343}
   - {fileID: -2329523394921583856}
   - {fileID: 3571624003462716350}
-  - {fileID: 7615845952088083294}
+  - {fileID: -6503095711572373198}
   m_StateMachineBehaviours:
   - {fileID: 608524955086415618}
   m_Position: {x: 50, y: 50, z: 0}
@@ -1162,34 +1187,6 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!1101 &-7963964108709505592
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 3
-    m_ConditionEvent: WaterLevelReactor
-    m_EventTreshold: 2150
-  - m_ConditionMode: 3
-    m_ConditionEvent: WP2RPM
-    m_EventTreshold: 0
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 2169844940762485723}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_ExitTime: 0.75
-  m_HasExitTime: 0
-  m_HasFixedDuration: 1
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
 --- !u!1101 &-7881872273129554830
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1284,34 +1281,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SV2Switch: {fileID: 0}
---- !u!1101 &-7759272905991267995
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 4
-    m_ConditionEvent: WaterLevelReactor
-    m_EventTreshold: 2150
-  - m_ConditionMode: 1
-    m_ConditionEvent: SV1Status
-    m_EventTreshold: 0
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: -5562664329017616017}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_ExitTime: 0.75
-  m_HasExitTime: 0
-  m_HasFixedDuration: 1
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
 --- !u!1102 &-7745408942218951419
 AnimatorState:
   serializedVersion: 6
@@ -1472,7 +1441,7 @@ AnimatorState:
   - {fileID: -592179665653372633}
   - {fileID: 6369763474069643926}
   - {fileID: -4286147886819639241}
-  - {fileID: -2583120412049956962}
+  - {fileID: -2068093803715348415}
   m_StateMachineBehaviours:
   - {fileID: 7499676043560084901}
   m_Position: {x: 50, y: 50, z: 0}
@@ -1680,9 +1649,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
+  - m_ConditionMode: 3
     m_ConditionEvent: RodPosition
-    m_EventTreshold: 100
+    m_EventTreshold: 94
   - m_ConditionMode: 3
     m_ConditionEvent: WP2RPM
     m_EventTreshold: 0
@@ -1693,6 +1662,34 @@ AnimatorStateTransition:
   m_IsExit: 0
   serializedVersion: 3
   m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &-7425550763589578529
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 6
+    m_ConditionEvent: WP1RPM
+    m_EventTreshold: 200
+  - m_ConditionMode: 4
+    m_ConditionEvent: RodPosition
+    m_EventTreshold: 95
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -8061038075495211079}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
   m_TransitionOffset: 0
   m_ExitTime: 0.75
   m_HasExitTime: 0
@@ -1728,6 +1725,18 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &-7283284373060662420
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f250277aa69c01a42ba46b191ed8be71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1102 &-7184023603055339439
 AnimatorState:
   serializedVersion: 6
@@ -2100,6 +2109,34 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1101 &-6886786045267248965
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 4
+    m_ConditionEvent: WP1RPM
+    m_EventTreshold: 200
+  - m_ConditionMode: 2
+    m_ConditionEvent: SV1Status
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -4634465625042948463}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1101 &-6825362278771514579
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -2255,7 +2292,7 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!1101 &-6549491710625463287
+--- !u!1101 &-6510194229640291987
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2263,19 +2300,44 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: SV1Status
-    m_EventTreshold: 0
   - m_ConditionMode: 3
-    m_ConditionEvent: WaterLevelReactor
-    m_EventTreshold: 2150
+    m_ConditionEvent: WP1RPM
+    m_EventTreshold: 200
   m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 2169844940762485723}
+  m_DstState: {fileID: 7183374170944423160}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &-6503095711572373198
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 4
+    m_ConditionEvent: WP1RPM
+    m_EventTreshold: 200
+  - m_ConditionMode: 3
+    m_ConditionEvent: RodPosition
+    m_EventTreshold: 94
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -4634465625042948463}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
   m_TransitionOffset: 0
   m_ExitTime: 0.75
   m_HasExitTime: 0
@@ -2363,34 +2425,6 @@ AnimatorStateTransition:
   m_TransitionOffset: 0
   m_ExitTime: 0.75
   m_HasExitTime: 1
-  m_HasFixedDuration: 1
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
---- !u!1101 &-6459351570921688774
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 4
-    m_ConditionEvent: WaterLevelReactor
-    m_EventTreshold: 2150
-  - m_ConditionMode: 4
-    m_ConditionEvent: RodPosition
-    m_EventTreshold: 95
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: -8061038075495211079}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_ExitTime: 0.75
-  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -2600,6 +2634,34 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1101 &-6135731318002927829
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 6
+    m_ConditionEvent: WP1RPM
+    m_EventTreshold: 200
+  - m_ConditionMode: 2
+    m_ConditionEvent: WV1Status
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 1095726603230218989}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1101 &-6120590487067292866
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -2644,52 +2706,6 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5486987211676753987}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_ExitTime: 0.75
-  m_HasExitTime: 0
-  m_HasFixedDuration: 1
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
---- !u!1101 &-6095113047618511010
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: SV1Status
-    m_EventTreshold: 0
-  - m_ConditionMode: 1
-    m_ConditionEvent: SV2Status
-    m_EventTreshold: 0
-  - m_ConditionMode: 1
-    m_ConditionEvent: WV1Status
-    m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: WV2Status
-    m_EventTreshold: 0
-  - m_ConditionMode: 6
-    m_ConditionEvent: WP1RPM
-    m_EventTreshold: 0
-  - m_ConditionMode: 6
-    m_ConditionEvent: WP2RPM
-    m_EventTreshold: 0
-  - m_ConditionMode: 6
-    m_ConditionEvent: RodPosition
-    m_EventTreshold: 100
-  - m_ConditionMode: 6
-    m_ConditionEvent: CPRPM
-    m_EventTreshold: 1600
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: -2602252659716788291}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
@@ -2978,7 +2994,7 @@ AnimatorState:
   - {fileID: 1422550373108895362}
   - {fileID: -3447744198288165416}
   - {fileID: 897724681552876190}
-  - {fileID: -1040249725378734259}
+  - {fileID: -2004964032261544963}
   m_StateMachineBehaviours:
   - {fileID: -7638320621807017304}
   m_Position: {x: 50, y: 50, z: 0}
@@ -3107,7 +3123,7 @@ AnimatorState:
   - {fileID: 7881811158657965356}
   - {fileID: 4434244815125584724}
   - {fileID: -2409295151593962358}
-  - {fileID: -6549491710625463287}
+  - {fileID: -6886786045267248965}
   m_StateMachineBehaviours:
   - {fileID: 3202269670524954967}
   m_Position: {x: 50, y: 50, z: 0}
@@ -3247,9 +3263,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: WV2Status
     m_EventTreshold: 0
-  - m_ConditionMode: 4
+  - m_ConditionMode: 6
     m_ConditionEvent: WP1RPM
-    m_EventTreshold: 201
+    m_EventTreshold: 200
   - m_ConditionMode: 6
     m_ConditionEvent: WP2RPM
     m_EventTreshold: 0
@@ -3259,9 +3275,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: CPRPM
     m_EventTreshold: 1600
-  - m_ConditionMode: 4
-    m_ConditionEvent: WaterLevelReactor
-    m_EventTreshold: 2150
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -122541294812431342}
   m_Solo: 0
@@ -3654,34 +3667,6 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!1101 &-4892556735506588312
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 4
-    m_ConditionEvent: WaterLevelReactor
-    m_EventTreshold: 2150
-  - m_ConditionMode: 2
-    m_ConditionEvent: SV2Status
-    m_EventTreshold: 0
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: -7508992717718940776}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_ExitTime: 0.75
-  m_HasExitTime: 0
-  m_HasFixedDuration: 1
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
 --- !u!1101 &-4867849479590245610
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -3878,7 +3863,7 @@ AnimatorStateTransition:
     m_EventTreshold: 1600
   - m_ConditionMode: 4
     m_ConditionEvent: RodPosition
-    m_EventTreshold: 100
+    m_EventTreshold: 95
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8061038075495211079}
   m_Solo: 0
@@ -3921,6 +3906,43 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1102 &-4634465625042948463
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'f3_10: WP1 RPM less 200'
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions:
+  - {fileID: 5853876512373292568}
+  - {fileID: 5838156897549860089}
+  - {fileID: -6510194229640291987}
+  - {fileID: -2697244314282064640}
+  - {fileID: -7425550763589578529}
+  - {fileID: 3937558285143794337}
+  - {fileID: 5193531581195924488}
+  - {fileID: -3999548395999843975}
+  - {fileID: -6135731318002927829}
+  - {fileID: 2519803504119873671}
+  m_StateMachineBehaviours:
+  - {fileID: 3651102170898141211}
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 0}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1101 &-4616218622199241698
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -4165,9 +4187,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
+  - m_ConditionMode: 3
     m_ConditionEvent: RodPosition
-    m_EventTreshold: 100
+    m_EventTreshold: 94
   - m_ConditionMode: 3
     m_ConditionEvent: CPRPM
     m_EventTreshold: 1600
@@ -4315,7 +4337,7 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 4
     m_ConditionEvent: RodPosition
-    m_EventTreshold: 100
+    m_EventTreshold: 95
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8061038075495211079}
   m_Solo: 0
@@ -4421,6 +4443,34 @@ MonoBehaviour:
   targetedObject: {fileID: 0}
   gazeMark: {fileID: 0}
   postController: {fileID: 0}
+--- !u!1101 &-3999548395999843975
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 6
+    m_ConditionEvent: WP1RPM
+    m_EventTreshold: 200
+  - m_ConditionMode: 4
+    m_ConditionEvent: CPRPM
+    m_EventTreshold: 1600
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -5681588033102482588}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1101 &-3941943907839966795
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -4920,9 +4970,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
+  - m_ConditionMode: 3
     m_ConditionEvent: RodPosition
-    m_EventTreshold: 100
+    m_EventTreshold: 94
   - m_ConditionMode: 3
     m_ConditionEvent: WP1RPM
     m_EventTreshold: 200
@@ -5124,6 +5174,31 @@ AnimatorStateTransition:
     m_EventTreshold: 1600
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3412343475520730409}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &-3300991511136644729
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 4
+    m_ConditionEvent: WP1RPM
+    m_EventTreshold: 200
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -4634465625042948463}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
@@ -5480,6 +5555,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a05a486f6d604578b948661b9e07c903, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1101 &-2697244314282064640
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 6
+    m_ConditionEvent: WP1RPM
+    m_EventTreshold: 200
+  - m_ConditionMode: 3
+    m_ConditionEvent: WP2RPM
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -8642628268611740836}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1101 &-2652996759899281841
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -5612,34 +5715,6 @@ AnimatorStateTransition:
   m_TransitionOffset: 0
   m_ExitTime: 0.75
   m_HasExitTime: 1
-  m_HasFixedDuration: 1
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
---- !u!1101 &-2583120412049956962
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 3
-    m_ConditionEvent: WaterLevelReactor
-    m_EventTreshold: 2150
-  - m_ConditionMode: 1
-    m_ConditionEvent: SV2Status
-    m_EventTreshold: 0
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 2169844940762485723}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_ExitTime: 0.75
-  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -5878,9 +5953,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
+  - m_ConditionMode: 3
     m_ConditionEvent: RodPosition
-    m_EventTreshold: 100
+    m_EventTreshold: 94
   - m_ConditionMode: 4
     m_ConditionEvent: CPRPM
     m_EventTreshold: 1600
@@ -5914,34 +5989,6 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7508992717718940776}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_ExitTime: 0.75
-  m_HasExitTime: 0
-  m_HasFixedDuration: 1
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
---- !u!1101 &-2287675061713451881
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 3
-    m_ConditionEvent: WaterLevelReactor
-    m_EventTreshold: 2150
-  - m_ConditionMode: 2
-    m_ConditionEvent: WV2Status
-    m_EventTreshold: 0
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 2169844940762485723}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
@@ -6098,7 +6145,7 @@ AnimatorState:
   - {fileID: -4655393926748680034}
   - {fileID: -5265380001838267588}
   - {fileID: -4466651588892705925}
-  - {fileID: 2508067495018882759}
+  - {fileID: -8924191025942056994}
   m_StateMachineBehaviours:
   - {fileID: -8900535528711007319}
   m_Position: {x: 50, y: 50, z: 0}
@@ -6149,6 +6196,34 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1101 &-2068093803715348415
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 4
+    m_ConditionEvent: WP1RPM
+    m_EventTreshold: 200
+  - m_ConditionMode: 1
+    m_ConditionEvent: SV2Status
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -4634465625042948463}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1101 &-2054128191489232496
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -6240,6 +6315,34 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1101 &-2004964032261544963
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 4
+    m_ConditionEvent: WP1RPM
+    m_EventTreshold: 200
+  - m_ConditionMode: 6
+    m_ConditionEvent: CPRPM
+    m_EventTreshold: 1600
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -4634465625042948463}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1101 &-1958804029625376157
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -6989,34 +7092,6 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!1101 &-1040249725378734259
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 3
-    m_ConditionEvent: WaterLevelReactor
-    m_EventTreshold: 2150
-  - m_ConditionMode: 6
-    m_ConditionEvent: CPRPM
-    m_EventTreshold: 1600
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 2169844940762485723}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_ExitTime: 0.75
-  m_HasExitTime: 0
-  m_HasFixedDuration: 1
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
 --- !u!1101 &-959132153959272399
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -7105,34 +7180,6 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!1101 &-887762283962353098
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 4
-    m_ConditionEvent: WaterLevelReactor
-    m_EventTreshold: 2150
-  - m_ConditionMode: 3
-    m_ConditionEvent: WP1RPM
-    m_EventTreshold: 200
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 7183374170944423160}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_ExitTime: 0.75
-  m_HasExitTime: 0
-  m_HasFixedDuration: 1
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
 --- !u!1102 &-877163620855155478
 AnimatorState:
   serializedVersion: 6
@@ -7198,12 +7245,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: CPRPM
     m_EventTreshold: 1600
-  - m_ConditionMode: 3
-    m_ConditionEvent: WaterLevelReactor
-    m_EventTreshold: 2050
-  - m_ConditionMode: 4
-    m_ConditionEvent: WaterLevelReactor
-    m_EventTreshold: 2150
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -521734486063119184}
   m_Solo: 0
@@ -7301,9 +7342,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: WV2Status
     m_EventTreshold: 0
-  - m_ConditionMode: 4
+  - m_ConditionMode: 6
     m_ConditionEvent: WP1RPM
-    m_EventTreshold: 201
+    m_EventTreshold: 200
   - m_ConditionMode: 6
     m_ConditionEvent: WP2RPM
     m_EventTreshold: 0
@@ -7313,9 +7354,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: CPRPM
     m_EventTreshold: 1600
-  - m_ConditionMode: 4
-    m_ConditionEvent: WaterLevelReactor
-    m_EventTreshold: 2150
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -122541294812431342}
   m_Solo: 0
@@ -7930,7 +7968,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 's3: keep water level at 2100'
+  m_Name: 's3: set rods to 95 at 2100mm'
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -7943,10 +7981,10 @@ AnimatorState:
   - {fileID: -3352218107868750247}
   - {fileID: -105729249415625391}
   - {fileID: -6927732331579578689}
-  - {fileID: 8286112400839321859}
-  - {fileID: -6095113047618511010}
   - {fileID: 3498480520239457026}
-  m_StateMachineBehaviours: []
+  - {fileID: 2293622227398414030}
+  m_StateMachineBehaviours:
+  - {fileID: 3022968522628744090}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -8382,6 +8420,34 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1101 &83443288950242968
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 4
+    m_ConditionEvent: WP1RPM
+    m_EventTreshold: 200
+  - m_ConditionMode: 2
+    m_ConditionEvent: WV2Status
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -4634465625042948463}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1101 &232523855698389384
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -8402,9 +8468,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: WV2Status
     m_EventTreshold: 0
-  - m_ConditionMode: 4
+  - m_ConditionMode: 6
     m_ConditionEvent: WP1RPM
-    m_EventTreshold: 201
+    m_EventTreshold: 200
   - m_ConditionMode: 6
     m_ConditionEvent: WP2RPM
     m_EventTreshold: 0
@@ -8414,9 +8480,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: CPRPM
     m_EventTreshold: 1600
-  - m_ConditionMode: 4
-    m_ConditionEvent: WaterLevelReactor
-    m_EventTreshold: 2150
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -122541294812431342}
   m_Solo: 0
@@ -8442,9 +8505,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: SV2Status
     m_EventTreshold: 0
-  - m_ConditionMode: 6
+  - m_ConditionMode: 3
     m_ConditionEvent: RodPosition
-    m_EventTreshold: 100
+    m_EventTreshold: 94
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7508992717718940776}
   m_Solo: 0
@@ -8515,18 +8578,6 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!114 &302365684483042366
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44628a0ce2e139144929c1dcf1476837, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1101 &311981322650505012
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -8575,16 +8626,16 @@ AnimatorStateMachine:
     m_Position: {x: 400, y: 40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -521734486063119184}
-    m_Position: {x: 400, y: 310, z: 0}
+    m_Position: {x: 400, y: 510, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4662280353224029376}
-    m_Position: {x: 400, y: 400, z: 0}
+    m_Position: {x: 400, y: 600, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3880688748792919620}
-    m_Position: {x: 400, y: 480, z: 0}
+    m_Position: {x: 400, y: 680, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3317302577298173949}
-    m_Position: {x: 400, y: 570, z: 0}
+    m_Position: {x: 400, y: 770, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3599125194464899713}
     m_Position: {x: 50, y: -980, z: 0}
@@ -8715,7 +8766,7 @@ AnimatorStateMachine:
     m_State: {fileID: -7508992717718940776}
     m_Position: {x: -340, y: 810, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 2169844940762485723}
+    m_State: {fileID: -4634465625042948463}
     m_Position: {x: -340, y: 1060, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
@@ -9126,7 +9177,7 @@ AnimatorStateTransition:
     m_EventTreshold: 1600
   - m_ConditionMode: 4
     m_ConditionEvent: RodPosition
-    m_EventTreshold: 100
+    m_EventTreshold: 95
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8061038075495211079}
   m_Solo: 0
@@ -9303,7 +9354,7 @@ AnimatorState:
   - {fileID: 3557244234294592964}
   - {fileID: 6165605798050031135}
   - {fileID: 5999992362807381319}
-  - {fileID: 4148359101758494492}
+  - {fileID: 6498166473245124593}
   m_StateMachineBehaviours:
   - {fileID: -7051054025695439726}
   m_Position: {x: 50, y: 50, z: 0}
@@ -9417,9 +9468,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: WV2Status
     m_EventTreshold: 0
-  - m_ConditionMode: 4
+  - m_ConditionMode: 6
     m_ConditionEvent: WP1RPM
-    m_EventTreshold: 201
+    m_EventTreshold: 200
   - m_ConditionMode: 6
     m_ConditionEvent: WP2RPM
     m_EventTreshold: 0
@@ -9429,9 +9480,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: CPRPM
     m_EventTreshold: 1600
-  - m_ConditionMode: 4
-    m_ConditionEvent: WaterLevelReactor
-    m_EventTreshold: 2150
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -122541294812431342}
   m_Solo: 0
@@ -9621,55 +9669,6 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!1101 &1353434496882759108
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: SV1Status
-    m_EventTreshold: 0
-  - m_ConditionMode: 1
-    m_ConditionEvent: SV2Status
-    m_EventTreshold: 0
-  - m_ConditionMode: 1
-    m_ConditionEvent: WV1Status
-    m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: WV2Status
-    m_EventTreshold: 0
-  - m_ConditionMode: 4
-    m_ConditionEvent: WP1RPM
-    m_EventTreshold: 201
-  - m_ConditionMode: 6
-    m_ConditionEvent: WP2RPM
-    m_EventTreshold: 0
-  - m_ConditionMode: 3
-    m_ConditionEvent: RodPosition
-    m_EventTreshold: 94
-  - m_ConditionMode: 6
-    m_ConditionEvent: CPRPM
-    m_EventTreshold: 1600
-  - m_ConditionMode: 4
-    m_ConditionEvent: WaterLevelReactor
-    m_EventTreshold: 2150
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: -122541294812431342}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_ExitTime: 0.75
-  m_HasExitTime: 0
-  m_HasFixedDuration: 1
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
 --- !u!1101 &1370957263547494182
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -9771,9 +9770,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: WV2Status
     m_EventTreshold: 0
-  - m_ConditionMode: 4
+  - m_ConditionMode: 6
     m_ConditionEvent: WP1RPM
-    m_EventTreshold: 201
+    m_EventTreshold: 200
   - m_ConditionMode: 6
     m_ConditionEvent: WP2RPM
     m_EventTreshold: 0
@@ -9783,9 +9782,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: CPRPM
     m_EventTreshold: 1600
-  - m_ConditionMode: 4
-    m_ConditionEvent: WaterLevelReactor
-    m_EventTreshold: 2150
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -122541294812431342}
   m_Solo: 0
@@ -10091,34 +10087,6 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!1101 &1707720601288678984
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 3
-    m_ConditionEvent: WaterLevelReactor
-    m_EventTreshold: 2150
-  - m_ConditionMode: 4
-    m_ConditionEvent: WP1RPM
-    m_EventTreshold: 201
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 2169844940762485723}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_ExitTime: 0.75
-  m_HasExitTime: 0
-  m_HasFixedDuration: 1
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
 --- !u!1101 &1754920820804576386
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -10228,34 +10196,6 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!1101 &2006056695964004567
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 4
-    m_ConditionEvent: WaterLevelReactor
-    m_EventTreshold: 2150
-  - m_ConditionMode: 1
-    m_ConditionEvent: WV2Status
-    m_EventTreshold: 0
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 2499026248582754240}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_ExitTime: 0.75
-  m_HasExitTime: 0
-  m_HasFixedDuration: 1
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
 --- !u!1101 &2054259840255229812
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -10284,42 +10224,6 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!1102 &2169844940762485723
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'f3_10: Water Level UP'
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions:
-  - {fileID: 1353434496882759108}
-  - {fileID: 4840698734071463377}
-  - {fileID: 8631437814343413196}
-  - {fileID: -4892556735506588312}
-  - {fileID: 2765404326507841558}
-  - {fileID: -6459351570921688774}
-  - {fileID: -887762283962353098}
-  - {fileID: 2006056695964004567}
-  - {fileID: -7759272905991267995}
-  m_StateMachineBehaviours:
-  - {fileID: 302365684483042366}
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 0}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
 --- !u!1101 &2224096514468087206
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -10393,6 +10297,31 @@ AnimatorStateTransition:
   m_IsExit: 0
   serializedVersion: 3
   m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &2293622227398414030
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 4
+    m_ConditionEvent: WP1RPM
+    m_EventTreshold: 200
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -4634465625042948463}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
   m_TransitionOffset: 0
   m_ExitTime: 0.75
   m_HasExitTime: 0
@@ -10615,7 +10544,7 @@ AnimatorState:
   - {fileID: 1138444984421680112}
   - {fileID: 8290392578776621899}
   - {fileID: -5782380634738963855}
-  - {fileID: -2287675061713451881}
+  - {fileID: 83443288950242968}
   m_StateMachineBehaviours:
   - {fileID: 7013424297136612752}
   m_Position: {x: 50, y: 50, z: 0}
@@ -10632,7 +10561,7 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1101 &2508067495018882759
+--- !u!1101 &2519803504119873671
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10640,19 +10569,37 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: SV1Status
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: SV2Status
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: WV1Status
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: WV2Status
+    m_EventTreshold: 0
+  - m_ConditionMode: 6
+    m_ConditionEvent: WP1RPM
+    m_EventTreshold: 200
+  - m_ConditionMode: 6
+    m_ConditionEvent: WP2RPM
+    m_EventTreshold: 0
   - m_ConditionMode: 3
-    m_ConditionEvent: WaterLevelReactor
-    m_EventTreshold: 2150
+    m_ConditionEvent: RodPosition
+    m_EventTreshold: 94
   - m_ConditionMode: 6
     m_ConditionEvent: CPRPM
     m_EventTreshold: 1600
   m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 2169844940762485723}
+  m_DstState: {fileID: -122541294812431342}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0
+  m_TransitionDuration: 0.25
   m_TransitionOffset: 0
   m_ExitTime: 0.75
   m_HasExitTime: 0
@@ -10696,9 +10643,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
+  - m_ConditionMode: 3
     m_ConditionEvent: RodPosition
-    m_EventTreshold: 100
+    m_EventTreshold: 94
   - m_ConditionMode: 1
     m_ConditionEvent: WV2Status
     m_EventTreshold: 0
@@ -10861,34 +10808,6 @@ AnimatorStateTransition:
     m_EventTreshold: 2150
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3880688748792919620}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_ExitTime: 0.75
-  m_HasExitTime: 0
-  m_HasFixedDuration: 1
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
---- !u!1101 &2765404326507841558
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 4
-    m_ConditionEvent: WaterLevelReactor
-    m_EventTreshold: 2150
-  - m_ConditionMode: 3
-    m_ConditionEvent: CPRPM
-    m_EventTreshold: 1600
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: -2141299940386939544}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
@@ -11082,9 +11001,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
+  - m_ConditionMode: 3
     m_ConditionEvent: RodPosition
-    m_EventTreshold: 100
+    m_EventTreshold: 94
   - m_ConditionMode: 1
     m_ConditionEvent: SV1Status
     m_EventTreshold: 0
@@ -11205,6 +11124,18 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!114 &3022968522628744090
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f55211c0220545babea18562d7c784d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1101 &3059951635841038916
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -11271,9 +11202,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: WV2Status
     m_EventTreshold: 0
-  - m_ConditionMode: 4
+  - m_ConditionMode: 6
     m_ConditionEvent: WP1RPM
-    m_EventTreshold: 201
+    m_EventTreshold: 200
   - m_ConditionMode: 6
     m_ConditionEvent: WP2RPM
     m_EventTreshold: 0
@@ -11283,9 +11214,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: CPRPM
     m_EventTreshold: 1600
-  - m_ConditionMode: 4
-    m_ConditionEvent: WaterLevelReactor
-    m_EventTreshold: 2150
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -122541294812431342}
   m_Solo: 0
@@ -11545,7 +11473,7 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 4
     m_ConditionEvent: RodPosition
-    m_EventTreshold: 100
+    m_EventTreshold: 95
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8061038075495211079}
   m_Solo: 0
@@ -11708,9 +11636,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: WV1Status
     m_EventTreshold: 0
-  - m_ConditionMode: 4
+  - m_ConditionMode: 3
     m_ConditionEvent: RodPosition
-    m_EventTreshold: 100
+    m_EventTreshold: 94
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1095726603230218989}
   m_Solo: 0
@@ -11868,6 +11796,18 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &3651102170898141211
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa9e8d595254b62b228d7ce41c9a86f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1101 &3664975326739283399
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -12100,6 +12040,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExtractRodsButton: {fileID: 0}
+--- !u!1101 &3937558285143794337
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 6
+    m_ConditionEvent: WP1RPM
+    m_EventTreshold: 200
+  - m_ConditionMode: 3
+    m_ConditionEvent: CPRPM
+    m_EventTreshold: 1600
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -2141299940386939544}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1101 &3994224811053875854
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -12164,34 +12132,6 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1101 &4148359101758494492
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 3
-    m_ConditionEvent: WaterLevelReactor
-    m_EventTreshold: 2150
-  - m_ConditionMode: 1
-    m_ConditionEvent: WV1Status
-    m_EventTreshold: 0
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 2169844940762485723}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_ExitTime: 0.75
-  m_HasExitTime: 0
-  m_HasFixedDuration: 1
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
 --- !u!1102 &4152950322008344676
 AnimatorState:
   serializedVersion: 6
@@ -12410,7 +12350,7 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 4
     m_ConditionEvent: RodPosition
-    m_EventTreshold: 100
+    m_EventTreshold: 95
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8061038075495211079}
   m_Solo: 0
@@ -12817,34 +12757,6 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!1101 &4840698734071463377
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: WV1Status
-    m_EventTreshold: 0
-  - m_ConditionMode: 4
-    m_ConditionEvent: WaterLevelReactor
-    m_EventTreshold: 2150
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 1095726603230218989}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_ExitTime: 0.75
-  m_HasExitTime: 0
-  m_HasFixedDuration: 1
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
 --- !u!1101 &4884812526377933119
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -13117,6 +13029,34 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1101 &5193531581195924488
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 6
+    m_ConditionEvent: WP1RPM
+    m_EventTreshold: 200
+  - m_ConditionMode: 2
+    m_ConditionEvent: SV2Status
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -7508992717718940776}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1101 &5200111723223614775
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -13369,7 +13309,7 @@ AnimatorStateTransition:
     m_EventTreshold: 201
   - m_ConditionMode: 4
     m_ConditionEvent: RodPosition
-    m_EventTreshold: 100
+    m_EventTreshold: 95
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8061038075495211079}
   m_Solo: 0
@@ -13418,6 +13358,62 @@ AnimatorStateTransition:
     m_EventTreshold: 1600
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2602252659716788291}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &5838156897549860089
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 6
+    m_ConditionEvent: WP1RPM
+    m_EventTreshold: 200
+  - m_ConditionMode: 1
+    m_ConditionEvent: WV2Status
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 2499026248582754240}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &5853876512373292568
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 6
+    m_ConditionEvent: WP1RPM
+    m_EventTreshold: 200
+  - m_ConditionMode: 1
+    m_ConditionEvent: SV1Status
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -5562664329017616017}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
@@ -13517,7 +13513,7 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 4
     m_ConditionEvent: RodPosition
-    m_EventTreshold: 100
+    m_EventTreshold: 95
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8061038075495211079}
   m_Solo: 0
@@ -13692,9 +13688,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: WV2Status
     m_EventTreshold: 0
-  - m_ConditionMode: 4
+  - m_ConditionMode: 6
     m_ConditionEvent: WP1RPM
-    m_EventTreshold: 201
+    m_EventTreshold: 200
   - m_ConditionMode: 6
     m_ConditionEvent: WP2RPM
     m_EventTreshold: 0
@@ -14118,6 +14114,34 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1101 &6498166473245124593
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 4
+    m_ConditionEvent: WP1RPM
+    m_EventTreshold: 200
+  - m_ConditionMode: 1
+    m_ConditionEvent: WV1Status
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -4634465625042948463}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1101 &6515546767202728259
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -14136,6 +14160,34 @@ AnimatorStateTransition:
   m_IsExit: 0
   serializedVersion: 3
   m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &6518992994873491061
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 4
+    m_ConditionEvent: WP1RPM
+    m_EventTreshold: 200
+  - m_ConditionMode: 6
+    m_ConditionEvent: WP2RPM
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -4634465625042948463}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
   m_TransitionOffset: 0
   m_ExitTime: 0.75
   m_HasExitTime: 0
@@ -14648,7 +14700,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 'f3_3: WP1 RPM greater 200 0'
+  m_Name: 'f3_3: WP1 RPM greater 200'
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -14661,7 +14713,7 @@ AnimatorState:
   - {fileID: -9002556981172802559}
   - {fileID: -3131028011760020835}
   - {fileID: -3819931448712358637}
-  - {fileID: 1707720601288678984}
+  - {fileID: -3300991511136644729}
   m_StateMachineBehaviours:
   - {fileID: 4700313973978817288}
   m_Position: {x: 50, y: 50, z: 0}
@@ -15095,34 +15147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 832c2d36091242ee92583f86b3e2005c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1101 &7615845952088083294
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 3
-    m_ConditionEvent: WaterLevelReactor
-    m_EventTreshold: 2150
-  - m_ConditionMode: 4
-    m_ConditionEvent: RodPosition
-    m_EventTreshold: 95
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 2169844940762485723}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_ExitTime: 0.75
-  m_HasExitTime: 0
-  m_HasFixedDuration: 1
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
 --- !u!1101 &7619600174191821875
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -15326,9 +15350,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: WV2Status
     m_EventTreshold: 0
-  - m_ConditionMode: 4
+  - m_ConditionMode: 6
     m_ConditionEvent: WP1RPM
-    m_EventTreshold: 201
+    m_EventTreshold: 200
   - m_ConditionMode: 6
     m_ConditionEvent: WP2RPM
     m_EventTreshold: 0
@@ -15338,9 +15362,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: CPRPM
     m_EventTreshold: 1600
-  - m_ConditionMode: 4
-    m_ConditionEvent: WaterLevelReactor
-    m_EventTreshold: 2150
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -122541294812431342}
   m_Solo: 0
@@ -15739,31 +15760,6 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!1101 &8286112400839321859
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 3
-    m_ConditionEvent: WaterLevelReactor
-    m_EventTreshold: 2150
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 2169844940762485723}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_ExitTime: 0.75
-  m_HasExitTime: 0
-  m_HasFixedDuration: 1
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
 --- !u!1101 &8290392578776621899
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -16107,34 +16103,6 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6356254008679644573}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_ExitTime: 0.75
-  m_HasExitTime: 0
-  m_HasFixedDuration: 1
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
---- !u!1101 &8631437814343413196
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 4
-    m_ConditionEvent: WaterLevelReactor
-    m_EventTreshold: 2150
-  - m_ConditionMode: 4
-    m_ConditionEvent: CPRPM
-    m_EventTreshold: 1600
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: -5681588033102482588}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
