@@ -63,10 +63,11 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 'f2_2: WV1 is open 0'
+  m_Name: 'f1_1: WV1 is open 0'
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
+  - {fileID: 8808635991157498858}
   - {fileID: 1305062254872712865}
   - {fileID: 959683466960406002}
   - {fileID: 551049567417250924}
@@ -74,7 +75,6 @@ AnimatorState:
   - {fileID: -1507647653017737349}
   - {fileID: 2609129235295195597}
   - {fileID: -959132153959272399}
-  - {fileID: 8808635991157498858}
   m_StateMachineBehaviours:
   - {fileID: 989549705807117424}
   m_Position: {x: 50, y: 50, z: 0}
@@ -104,7 +104,7 @@ AnimatorStateTransition:
     m_EventTreshold: 100
   - m_ConditionMode: 3
     m_ConditionEvent: CPRPM
-    m_EventTreshold: 0
+    m_EventTreshold: 1600
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8363512118430333361}
   m_Solo: 0
@@ -139,10 +139,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -203,10 +203,11 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 'f2_1: SV1 is open 0'
+  m_Name: 'f1_0: SV1 is open 0'
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
+  - {fileID: -2525054654798412850}
   - {fileID: -7339348212971529441}
   - {fileID: 2574778426191790461}
   - {fileID: 6013723781961598277}
@@ -214,7 +215,6 @@ AnimatorState:
   - {fileID: 6566594066273357524}
   - {fileID: -3363409792739457148}
   - {fileID: 4818897689662420955}
-  - {fileID: -2525054654798412850}
   m_StateMachineBehaviours:
   - {fileID: 7936711522147100819}
   m_Position: {x: 50, y: 50, z: 0}
@@ -423,18 +423,18 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 'f2_3: WV2 is open 0'
+  m_Name: 'f1_2: WV2 is open 0'
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
+  - {fileID: 7643688158423482676}
+  - {fileID: 2781431164289128539}
   - {fileID: 4763824177104795483}
   - {fileID: -4639273075103720286}
   - {fileID: -6583789840834939248}
   - {fileID: 8472836424007230865}
   - {fileID: 8300033697949020148}
-  - {fileID: 2781431164289128539}
   - {fileID: 8419413912528497083}
-  - {fileID: 7643688158423482676}
   m_StateMachineBehaviours:
   - {fileID: -178888111176240308}
   m_Position: {x: 50, y: 50, z: 0}
@@ -557,7 +557,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 'f1_4: WP1 RPM are UP'
+  m_Name: 'f0_3: WP1 RPM are UP'
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -629,10 +629,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -694,16 +694,19 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: RodPosition
     m_EventTreshold: 100
+  - m_ConditionMode: 4
+    m_ConditionEvent: CPRPM
+    m_EventTreshold: 1601
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3842380917051559094}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -902,9 +905,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
+  - m_ConditionMode: 4
     m_ConditionEvent: CPRPM
-    m_EventTreshold: 2000
+    m_EventTreshold: 1601
   - m_ConditionMode: 1
     m_ConditionEvent: WV1Status
     m_EventTreshold: 0
@@ -914,10 +917,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -929,7 +932,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 'f2_8: SV2 is closed'
+  m_Name: 'f1_7: SV2 is closed'
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1017,10 +1020,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -1122,10 +1125,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -1202,16 +1205,19 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: RodPosition
     m_EventTreshold: 100
+  - m_ConditionMode: 4
+    m_ConditionEvent: CPRPM
+    m_EventTreshold: 1601
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3842380917051559094}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -1264,10 +1270,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -1338,7 +1344,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 6
     m_ConditionEvent: CPRPM
-    m_EventTreshold: 2000
+    m_EventTreshold: 1601
   - m_ConditionMode: 1
     m_ConditionEvent: WV2Status
     m_EventTreshold: 0
@@ -1348,10 +1354,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -1522,9 +1528,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
+  - m_ConditionMode: 4
     m_ConditionEvent: CPRPM
-    m_EventTreshold: 2000
+    m_EventTreshold: 1601
   - m_ConditionMode: 3
     m_ConditionEvent: WP1RPM
     m_EventTreshold: 0
@@ -1534,10 +1540,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -1604,7 +1610,7 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 3
     m_ConditionEvent: CPRPM
-    m_EventTreshold: 0
+    m_EventTreshold: 1600
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8363512118430333361}
   m_Solo: 0
@@ -1712,7 +1718,7 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 3
     m_ConditionEvent: CPRPM
-    m_EventTreshold: 0
+    m_EventTreshold: 1600
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8363512118430333361}
   m_Solo: 0
@@ -1776,10 +1782,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -1869,16 +1875,19 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: RodPosition
     m_EventTreshold: 100
+  - m_ConditionMode: 4
+    m_ConditionEvent: CPRPM
+    m_EventTreshold: 1601
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3842380917051559094}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -2055,7 +2064,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 'f1_5: WP2 RPM are UP'
+  m_Name: 'f0_4: WP2 RPM are UP'
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -2099,10 +2108,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -2359,10 +2368,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -2399,7 +2408,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 'f1_2: WV1 is open'
+  m_Name: 'f0_1: WV1 is open'
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -2904,10 +2913,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -3029,16 +3038,19 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: RodPosition
     m_EventTreshold: 100
+  - m_ConditionMode: 4
+    m_ConditionEvent: CPRPM
+    m_EventTreshold: 1601
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3842380917051559094}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -3275,10 +3287,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -3430,7 +3442,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 'f1_6: Rods are extracted'
+  m_Name: 'f0_5: Rods are extracted'
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -3785,7 +3797,7 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 3
     m_ConditionEvent: CPRPM
-    m_EventTreshold: 0
+    m_EventTreshold: 1600
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8363512118430333361}
   m_Solo: 0
@@ -3817,10 +3829,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -3940,10 +3952,11 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 'f2_4: WP1 RPM are UP 0'
+  m_Name: 'f1_3: WP1 RPM are UP 0'
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
+  - {fileID: 7215113381435300904}
   - {fileID: 2811579243445299829}
   - {fileID: 8732511595370720419}
   - {fileID: -2213101689151515828}
@@ -3951,7 +3964,6 @@ AnimatorState:
   - {fileID: -2409449089455413385}
   - {fileID: 6826040036698645851}
   - {fileID: 6746609573676552797}
-  - {fileID: 7215113381435300904}
   m_StateMachineBehaviours:
   - {fileID: -3871095557877516850}
   m_Position: {x: 50, y: 50, z: 0}
@@ -4105,19 +4117,19 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: SV2Status
     m_EventTreshold: 0
-  - m_ConditionMode: 6
+  - m_ConditionMode: 4
     m_ConditionEvent: CPRPM
-    m_EventTreshold: 1600
+    m_EventTreshold: 1601
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6337892223731677606}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -4157,7 +4169,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 'f1_1: SV1 is open'
+  m_Name: 'f0_0: SV1 is open'
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -4325,18 +4337,18 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 'f2_6: Rods are extracted 0'
+  m_Name: 'f1_5: Rods are extracted 0'
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
+  - {fileID: -5027725060365178974}
+  - {fileID: -7002726482438918904}
   - {fileID: 2229782795382073418}
   - {fileID: -1599776823605400606}
   - {fileID: -1360063162396356471}
   - {fileID: 7724470159909546682}
   - {fileID: -8687505909276905263}
-  - {fileID: -7002726482438918904}
   - {fileID: 291240394764495842}
-  - {fileID: -5027725060365178974}
   m_StateMachineBehaviours:
   - {fileID: -2210446622657348643}
   m_Position: {x: 50, y: 50, z: 0}
@@ -4499,9 +4511,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: RodPosition
     m_EventTreshold: 100
-  - m_ConditionMode: 6
+  - m_ConditionMode: 4
     m_ConditionEvent: CPRPM
-    m_EventTreshold: 0
+    m_EventTreshold: 1600
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3842380917051559094}
   m_Solo: 0
@@ -4551,10 +4563,11 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 'f2_5: WP2 RPM are UP 0'
+  m_Name: 'f1_4: WP2 RPM are UP 0'
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
+  - {fileID: 8800149286318727797}
   - {fileID: -57838607971388570}
   - {fileID: -2171901853691862559}
   - {fileID: -4292013650936469404}
@@ -4562,7 +4575,6 @@ AnimatorState:
   - {fileID: -1626435824399250907}
   - {fileID: -3575569043704420825}
   - {fileID: -4676988573754385599}
-  - {fileID: 8800149286318727797}
   m_StateMachineBehaviours:
   - {fileID: -2446214048376960954}
   m_Position: {x: 50, y: 50, z: 0}
@@ -4615,9 +4627,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
+  - m_ConditionMode: 4
     m_ConditionEvent: CPRPM
-    m_EventTreshold: 2000
+    m_EventTreshold: 1601
   - m_ConditionMode: 1
     m_ConditionEvent: SV1Status
     m_EventTreshold: 0
@@ -4655,10 +4667,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -4779,7 +4791,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 'f1_3: WV2 is open'
+  m_Name: 'f0_2: WV2 is open'
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -4986,7 +4998,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 'start: open SV2'
+  m_Name: 's0: open SV2'
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -5022,7 +5034,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 'f1_7: CP RPM are UP'
+  m_Name: 'f0_6: CP RPM are UP'
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -5078,10 +5090,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -5192,10 +5204,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -5213,7 +5225,7 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 3
     m_ConditionEvent: CPRPM
-    m_EventTreshold: 0
+    m_EventTreshold: 1600
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8363512118430333361}
   m_Solo: 0
@@ -5245,10 +5257,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -5282,10 +5294,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -5298,9 +5310,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
+  - m_ConditionMode: 4
     m_ConditionEvent: CPRPM
-    m_EventTreshold: 2000
+    m_EventTreshold: 1601
   - m_ConditionMode: 3
     m_ConditionEvent: WP2RPM
     m_EventTreshold: 0
@@ -5310,10 +5322,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -5347,16 +5359,19 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: RodPosition
     m_EventTreshold: 100
+  - m_ConditionMode: 4
+    m_ConditionEvent: CPRPM
+    m_EventTreshold: 1601
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3842380917051559094}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -5501,16 +5516,19 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: RodPosition
     m_EventTreshold: 100
+  - m_ConditionMode: 4
+    m_ConditionEvent: CPRPM
+    m_EventTreshold: 1601
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3842380917051559094}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -5591,10 +5609,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -5684,9 +5702,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
+  - m_ConditionMode: 4
     m_ConditionEvent: CPRPM
-    m_EventTreshold: 2000
+    m_EventTreshold: 1601
   - m_ConditionMode: 4
     m_ConditionEvent: RodPosition
     m_EventTreshold: 100
@@ -5696,10 +5714,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -5831,7 +5849,7 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 3
     m_ConditionEvent: CPRPM
-    m_EventTreshold: 0
+    m_EventTreshold: 1600
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8363512118430333361}
   m_Solo: 0
@@ -5853,18 +5871,18 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 'f2_7: CP RPM are UP 2000'
+  m_Name: 'f1_6: CP RPM are UP >1600'
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
+  - {fileID: 502858835976726867}
+  - {fileID: 4776724726790974137}
+  - {fileID: -4317104815522367520}
+  - {fileID: -6393719462171637962}
   - {fileID: -3626604202212049498}
   - {fileID: 7086302733258762288}
   - {fileID: 8030324320387230965}
-  - {fileID: 4776724726790974137}
-  - {fileID: -6393719462171637962}
-  - {fileID: -4317104815522367520}
   - {fileID: 3461047692745043706}
-  - {fileID: 502858835976726867}
   m_StateMachineBehaviours:
   - {fileID: 6952809226600485194}
   m_Position: {x: 50, y: 50, z: 0}
@@ -5901,10 +5919,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -5972,10 +5990,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -6220,16 +6238,19 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: RodPosition
     m_EventTreshold: 100
+  - m_ConditionMode: 4
+    m_ConditionEvent: CPRPM
+    m_EventTreshold: 1601
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3842380917051559094}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -6263,16 +6284,19 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: RodPosition
     m_EventTreshold: 100
+  - m_ConditionMode: 4
+    m_ConditionEvent: CPRPM
+    m_EventTreshold: 1601
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3842380917051559094}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -6362,10 +6386,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
