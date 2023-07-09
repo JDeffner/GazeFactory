@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class S2bBehaviour : StateMachineBehaviour
+public class WaterHighBehaviour : StateMachineBehaviour
 {
     private GameObject targetedObject;
     private SimpleGazeMark gazeMark;
@@ -9,7 +9,7 @@ public class S2bBehaviour : StateMachineBehaviour
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
         // Set targeted Object
-        targetedObject = GameObject.Find("WP1RPMUp"); 
+        targetedObject = GameObject.Find("WP1RPMDown"); 
         // Find GazeGuiding Components
         gazeMark =  FindObjectOfType<SimpleGazeMark>();
         postController = FindObjectOfType<PostProcessingController>();
