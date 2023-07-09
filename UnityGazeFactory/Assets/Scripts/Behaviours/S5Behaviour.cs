@@ -23,7 +23,7 @@ public class S5Behaviour : StateMachineBehaviour
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
-        gazeMark.isActive = false;
-        postController.isActive = false;
+        // gazeMark.isActive = false;
+        // postController.isActive = false;
     }
 }
