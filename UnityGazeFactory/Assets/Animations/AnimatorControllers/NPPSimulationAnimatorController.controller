@@ -13728,7 +13728,7 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 2
+  - m_ConditionMode: 1
     m_ConditionEvent: SV1Status
     m_EventTreshold: 0
   - m_ConditionMode: 2
@@ -13741,14 +13741,11 @@ AnimatorStateTransition:
     m_ConditionEvent: WV2Status
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: WP1RPM
-    m_EventTreshold: 0
-  - m_ConditionMode: 6
     m_ConditionEvent: WP2RPM
     m_EventTreshold: 0
   - m_ConditionMode: 6
     m_ConditionEvent: RodPosition
-    m_EventTreshold: 100
+    m_EventTreshold: 40
   - m_ConditionMode: 6
     m_ConditionEvent: CPRPM
     m_EventTreshold: 1600
