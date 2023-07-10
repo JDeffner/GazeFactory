@@ -9,7 +9,7 @@ public class S3Behaviour : StateMachineBehaviour
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
         // Set targeted Object
-        targetedObject = GameObject.Find("SV1Switch"); 
+        targetedObject = GameObject.Find("WaterLevelVisualizationReactorBlock"); 
         // Find GazeGuiding Components
         gazeMark =  FindObjectOfType<SimpleGazeMark>();
         postController = FindObjectOfType<PostProcessingController>();

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class S4Behaviour : StateMachineBehaviour
+public class animateSV1 : StateMachineBehaviour
 {
     private GameObject targetedObject;
     private SimpleGazeMark gazeMark;
@@ -23,7 +23,6 @@ public class S4Behaviour : StateMachineBehaviour
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
-        //gazeMark.isActive = false;
-        //postController.isActive = false;
+        // gazeMark.isActive = false;
     }
 }

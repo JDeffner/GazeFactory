@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class S4Behaviour : StateMachineBehaviour
+public class S5Behaviour : StateMachineBehaviour
 {
     private GameObject targetedObject;
     private SimpleGazeMark gazeMark;
@@ -9,7 +9,7 @@ public class S4Behaviour : StateMachineBehaviour
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
         // Set targeted Object
-        targetedObject = GameObject.Find("SV1Switch"); 
+        targetedObject = GameObject.Find("SV2Switch"); 
         // Find GazeGuiding Components
         gazeMark =  FindObjectOfType<SimpleGazeMark>();
         postController = FindObjectOfType<PostProcessingController>();
@@ -23,7 +23,7 @@ public class S4Behaviour : StateMachineBehaviour
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
-        //gazeMark.isActive = false;
-        //postController.isActive = false;
+        // gazeMark.isActive = false;
+        // postController.isActive = false;
     }
 }
