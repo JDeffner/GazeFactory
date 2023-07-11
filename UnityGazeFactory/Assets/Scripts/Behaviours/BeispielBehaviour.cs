@@ -25,7 +25,9 @@ public class BeispielBehaviour : StateMachineBehaviour
         string color = "#FF4306"; // Red Hex Code
         gazeText.text = "Test \n ist \n gelungen!!!!"; // "\n" für Zeilenumbruch
         gazeText.textColor = color;
+        gazeText.textSize = 0.03f; // 0.03f is normal Size -> U need to undo in next State
         gazeMark.markColor = color;
+        gazeMark.markSize = 0.06f; // 0.06f is normal Size -> U need to undo in next State
         // Set GazeGuiding active
         gazeMark.isActive = true;
         postController.isActive = true;

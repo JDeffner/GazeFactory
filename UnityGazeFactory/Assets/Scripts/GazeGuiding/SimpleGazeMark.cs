@@ -9,6 +9,7 @@ public class SimpleGazeMark : MonoBehaviour {
     public List<Vector3> markOffset; 
     public float markBlinkIntervall = 0.5f;
     public float rotationSpeed = 10f;
+    public float markSize = 0.06f;
     public string markColor; 
     public float markAlpha = 0.3f; 
     public bool isActive = false;
@@ -25,11 +26,7 @@ public class SimpleGazeMark : MonoBehaviour {
     void Update() {
         UpdateMark();
         HandleMarkBlink();
-        Color color;
-        if (ColorUtility.TryParseHtmlString(markColor, out color))
-        {
-            ChangeMarkColor(color);
-        }
+        ChangeMarkColor();
     }
 
     private void UpdateMark() {
@@ -51,6 +48,7 @@ public class SimpleGazeMark : MonoBehaviour {
                 markR.y += rotationSpeed * Time.deltaTime;
                 markInstance.transform.localEulerAngles = markR;
             }
+            GameObject.Find("Exclamation Mark 1(Clone)").transform.localScale = new Vector3(markSize, markSize, markSize);
         }
     }
     
@@ -80,12 +78,16 @@ public class SimpleGazeMark : MonoBehaviour {
         }
     }
     
-    private void ChangeMarkColor(Color color)
+    private void ChangeMarkColor()
     {
-        color.a = markAlpha;
-        foreach (Renderer renderer in markRendereres)
+        Color color;
+        if (ColorUtility.TryParseHtmlString(markColor, out color))
         {
-            renderer.material.color = color;
+            color.a = markAlpha;
+            foreach (Renderer renderer in markRendereres)
+            {
+                renderer.material.color = color;
+            }
         }
     }
 }
