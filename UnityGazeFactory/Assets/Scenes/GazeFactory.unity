@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -24896,7 +24896,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetedObject: {fileID: 857308387}
   markPrefab: {fileID: 7739231430315472403, guid: 7012cc3047d90bc43bbb1558403f4471, type: 3}
-  maxMarkDistance: 30
   targetedObjects:
   - {fileID: 1930736782}
   - {fileID: 85860868}
@@ -24907,7 +24906,6 @@ MonoBehaviour:
   - {fileID: 289478238}
   - {fileID: 434902755}
   - {fileID: 1994114023}
-  - {fileID: 1233722706}
   - {fileID: 1232719338}
   - {fileID: 539107492}
   - {fileID: 818256686}
@@ -24922,12 +24920,11 @@ MonoBehaviour:
   - {x: -0.05, y: 0.2, z: 0}
   - {x: -0.05, y: 0.2, z: 0}
   - {x: -0.05, y: 0.2, z: 0}
-  - {x: -0.05, y: 0.2, z: 0}
   - {x: -1, y: 1, z: 0}
   - {x: -0.05, y: 0.2, z: 0}
   markBlinkIntervall: 0.5
   rotationSpeed: 50
-  markColor: {r: 1, g: 0.26190042, b: 0.023584902, a: 1}
+  markColor: 
   markAlpha: 0.7
   isActive: 0
 --- !u!114 &1827973675
@@ -24994,7 +24991,29 @@ MonoBehaviour:
   textSize: 0.03
   targetedObjects:
   - {fileID: 1930736782}
+  - {fileID: 85860868}
+  - {fileID: 1233722706}
+  - {fileID: 215916340}
+  - {fileID: 1654835837}
+  - {fileID: 1019343368}
+  - {fileID: 289478238}
+  - {fileID: 434902755}
+  - {fileID: 1994114023}
+  - {fileID: 1232719338}
+  - {fileID: 539107492}
+  - {fileID: 818256686}
   textOffset:
+  - {x: 0, y: 0.25, z: 0}
+  - {x: 0, y: 0.4, z: 0}
+  - {x: 0, y: 0.4, z: 0}
+  - {x: 0, y: -0.1, z: 0}
+  - {x: 0, y: 0.4, z: 0}
+  - {x: 0, y: 0.4, z: 0}
+  - {x: 0, y: -0.1, z: 0}
+  - {x: 0, y: 0.4, z: 0}
+  - {x: 0, y: 0.4, z: 0}
+  - {x: 0, y: 0.4, z: 0}
+  - {x: 0, y: 0.4, z: 0}
   - {x: 0, y: 0.4, z: 0}
   isActive: 1
 --- !u!1 &1891461287
