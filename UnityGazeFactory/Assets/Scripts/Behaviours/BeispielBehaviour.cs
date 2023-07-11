@@ -12,10 +12,7 @@ public class BeispielBehaviour : StateMachineBehaviour
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
         // Set targeted Object
-        targetedObject = GameObject.Find("CPRPMUp"); 
-        // Set Text and TextColor
-        gazeText.text = "Test \n ist \n gelungen!!!!"; // "\n" für Zeilenumbruch
-        gazeText.textColor = "#61A5FF"; // Light Blue Hex Code
+        targetedObject = GameObject.Find("CPRPMUp");
         // Find GazeGuiding Components
         gazeMark =  FindObjectOfType<SimpleGazeMark>();
         postController = FindObjectOfType<PostProcessingController>();
@@ -24,6 +21,9 @@ public class BeispielBehaviour : StateMachineBehaviour
         gazeMark.targetedObject = targetedObject;
         postController.targetedObject = targetedObject;
         gazeText.targetedObject = targetedObject;
+        // Set Text and TextColor
+        gazeText.text = "Test \n ist \n gelungen!!!!"; // "\n" für Zeilenumbruch
+        gazeText.textColor = "#61A5FF"; // Light Blue Hex Code
         // Set GazeGuiding active
         gazeMark.isActive = true;
         postController.isActive = true;
