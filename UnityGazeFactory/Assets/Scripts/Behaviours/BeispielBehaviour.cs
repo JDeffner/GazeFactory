@@ -22,7 +22,7 @@ public class BeispielBehaviour : StateMachineBehaviour
         postController.targetedObject = targetedObject;
         gazeText.targetedObject = targetedObject;
         // Set Text and TextColor
-        gazeText.text = "Test \n ist \n gelungen!!!!"; // "\n" für Zeilenumbruch
+        gazeText.text = "Test \n ist \n gelungen!!!!\n wait what?!"; // "\n" für Zeilenumbruch
         gazeText.textColor = "#61A5FF"; // Light Blue Hex Code
         // Set GazeGuiding active
         gazeMark.isActive = true;
