@@ -1,18 +1,15 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System;
 using System.Collections.Generic;
 
 public class SimpleGazeMark : MonoBehaviour {
 
     public GameObject targetedObject;
     public GameObject markPrefab;
-    public float maxMarkDistance = 30;
     public List<GameObject> targetedObjects; 
     public List<Vector3> markOffset; 
     public float markBlinkIntervall = 0.5f;
-    public float rotationSpeed = 10f; 
-    public Color markColor = Color.white; 
+    public float rotationSpeed = 10f;
+    public string markColor; 
     public float markAlpha = 0.3f; 
     public bool isActive = false;
     private GameObject markInstance;
@@ -23,15 +20,16 @@ public class SimpleGazeMark : MonoBehaviour {
     void Start() {
         markInstance = Instantiate(markPrefab);
         markRendereres = new List<Renderer>(markInstance.GetComponentsInChildren<Renderer>());
-
-        // Ändere die Farbe des Marks
-        ChangeMarkColor(markColor);
     }
     
     void Update() {
         UpdateMark();
         HandleMarkBlink();
-        ChangeMarkColor(markColor);
+        Color color;
+        if (ColorUtility.TryParseHtmlString(markColor, out color))
+        {
+            ChangeMarkColor(color);
+        }
     }
 
     private void UpdateMark() {
