@@ -21,9 +21,11 @@ public class BeispielBehaviour : StateMachineBehaviour
         gazeMark.targetedObject = targetedObject;
         postController.targetedObject = targetedObject;
         gazeText.targetedObject = targetedObject;
-        // Set Text and TextColor
-        gazeText.text = "Test \n ist \n gelungen!!!!\n wait what?!"; // "\n" für Zeilenumbruch
-        gazeText.textColor = "#61A5FF"; // Light Blue Hex Code
+        // Set Text, TextColor and Mark Color
+        string color = "#FF4306"; // Red Hex Code
+        gazeText.text = "Test \n ist \n gelungen!!!!"; // "\n" für Zeilenumbruch
+        gazeText.textColor = color;
+        gazeMark.markColor = color;
         // Set GazeGuiding active
         gazeMark.isActive = true;
         postController.isActive = true;
