@@ -19,8 +19,8 @@ public class StartBehaviour : StateMachineBehaviour
         postController.targetedObject = targetedObject;
         gazeText.targetedObject = targetedObject;
         // Set Text, TextColor and Mark Color
-        string color = "#32CD32"; // Red Hex Code
-        gazeText.text = "SV2"; // "\n" für Zeilenumbruch
+        string color = "#32CD32"; // 
+        gazeText.text = "Sequenz: Hochfahren\nAktion: SV2 öffnen";
         gazeText.textColor = color;
         gazeMark.markColor = color;
         // Set GazeGuiding active
