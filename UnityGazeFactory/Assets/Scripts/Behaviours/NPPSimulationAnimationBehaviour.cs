@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 using NPPImpl;
 
@@ -11,6 +12,8 @@ public class NPPSimulationAnimationBehaviour : MonoBehaviour
     private ControllerCubeBehaviour controllerCubeBehaviour;
     // Reference to the NPPSystemInterface component
     private NPPSystemInterface systemInterface;
+    private bool isSinking;
+    private int dCalc;
 
     void Start()
     {
@@ -20,6 +23,8 @@ public class NPPSimulationAnimationBehaviour : MonoBehaviour
         controllerCubeBehaviour = GetComponent<ControllerCubeBehaviour>();
         // Get the NPPSystemInterface component
         systemInterface = controllerCubeBehaviour.getNPPSystemInterface();
+        isSinking = GameObject.Find("Wart").GetComponent<controllingWP1accordingToRods>().isSinking;
+        dCalc = GameObject.Find("Wart").GetComponent<controllingWP1accordingToRods>().dCalc;
     }
 
 void Update()
@@ -54,6 +59,8 @@ void Update()
         animator.SetInteger("WP1RPMSet", systemInterface.getWP1RPMSet());
         animator.SetInteger("WP2RPMSet", systemInterface.getWP2RPMSet());
         animator.SetInteger("CPRPMSet", systemInterface.getCPRPMSet());
+        animator.SetBool("isSinking", isSinking);
+        animator.SetInteger("dCalc", dCalc);
     }
 }
 
