@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -25024,9 +25024,9 @@ MonoBehaviour:
   vrCamera: {fileID: 1649192287}
   targetedObject: {fileID: 1930736782}
   canvas: {fileID: 1017037209}
-  text: Test ist gelungen
+  text: 
   textColor: 
-  textSize: 0.03
+  textSize: 0.04
   targetedObjects:
   - {fileID: 1930736782}
   - {fileID: 85860868}
@@ -25041,7 +25041,7 @@ MonoBehaviour:
   - {fileID: 539107492}
   - {fileID: 818256686}
   textOffset:
-  - {x: 0, y: 0.25, z: 0}
+  - {x: 0, y: 0.4, z: 0}
   - {x: 0, y: 0.4, z: 0}
   - {x: 0, y: 0.4, z: 0}
   - {x: 0, y: -0.1, z: 0}
