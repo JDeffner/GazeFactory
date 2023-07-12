@@ -25008,7 +25008,7 @@ MonoBehaviour:
   isBlinking: 1
   isActive: 1
   DebugMode: 0
-  vignetteOffset: 0.1
+  vignetteOffset: 0.65
 --- !u!114 &1827973677
 MonoBehaviour:
   m_ObjectHideFlags: 0
