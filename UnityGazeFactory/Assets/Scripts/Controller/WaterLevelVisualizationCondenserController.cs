@@ -6,6 +6,8 @@ public class WaterLevelVisualizationCondenserController : MonoBehaviour
 {
     private bool isMovingUp = true;
     private bool isMovingDown = true;
+    public Material baseMaterial;
+    public Material altMaterial;
     private ControllerCubeBehaviour controllerCubeBehaviour;
 
     void Awake()
@@ -17,28 +19,15 @@ public class WaterLevelVisualizationCondenserController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isMovingUp)
-            transform.Translate(Vector3.up * Time.deltaTime);
-        if (transform.position.y > controllerCubeBehaviour.getNPPSystemInterface().getWaterLevelCondenser() * 0.00025f)
+        transform.localPosition = new Vector3(0, controllerCubeBehaviour.getNPPSystemInterface().getWaterLevelCondenser() * 0.000125f, 0);
+        
+        if (controllerCubeBehaviour.getNPPSystemInterface().getWaterLevelCondenser() > 0)
         {
-            isMovingUp = false;
+            this.gameObject.GetComponent<MeshRenderer>().sharedMaterial = altMaterial;
         }
-
-        if (transform.position.y < controllerCubeBehaviour.getNPPSystemInterface().getWaterLevelCondenser() * 0.00025f)
+        else
         {
-            isMovingUp = true;
-        }
-
-        if (isMovingDown)
-            transform.Translate(Vector3.down * Time.deltaTime);
-        if (transform.position.y < controllerCubeBehaviour.getNPPSystemInterface().getWaterLevelCondenser() * 0.00025f)
-        {
-            isMovingDown = false;
-        }
-
-        if (transform.position.y > controllerCubeBehaviour.getNPPSystemInterface().getWaterLevelCondenser() * 0.00025f)
-        {
-            isMovingDown = true;
+            this.gameObject.GetComponent<MeshRenderer>().sharedMaterial = baseMaterial;
         }
     }
 }

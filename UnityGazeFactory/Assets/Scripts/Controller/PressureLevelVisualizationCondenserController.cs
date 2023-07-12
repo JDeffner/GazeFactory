@@ -6,6 +6,8 @@ public class PressureLevelVisualizationCondenserController : MonoBehaviour
 {
     private bool isMovingUp = true;
     private bool isMovingDown = true;
+    public Material baseMaterial;
+    public Material altMaterial;
     private ControllerCubeBehaviour controllerCubeBehaviour;
 
     void Awake()
@@ -17,28 +19,15 @@ public class PressureLevelVisualizationCondenserController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isMovingUp)
-            transform.Translate(Vector3.up * Time.deltaTime);
-        if (transform.position.y > controllerCubeBehaviour.getNPPSystemInterface().getPressureCondenser() * 0.011111111111f)
+        transform.localPosition = new Vector3(0, controllerCubeBehaviour.getNPPSystemInterface().getPressureCondenser() * 0.0055555555f, 0);
+        
+        if (controllerCubeBehaviour.getNPPSystemInterface().getPressureCondenser() > 0)
         {
-            isMovingUp = false;
+            this.gameObject.GetComponent<MeshRenderer>().sharedMaterial = altMaterial;
         }
-
-        if (transform.position.y < controllerCubeBehaviour.getNPPSystemInterface().getPressureCondenser() * 0.011111111111f)
+        else
         {
-            isMovingUp = true;
-        }
-
-        if (isMovingDown)
-            transform.Translate(Vector3.down * Time.deltaTime);
-        if (transform.position.y < controllerCubeBehaviour.getNPPSystemInterface().getPressureCondenser() * 0.011111111111f)
-        {
-            isMovingDown = false;
-        }
-
-        if (transform.position.y > controllerCubeBehaviour.getNPPSystemInterface().getPressureCondenser() * 0.011111111111f)
-        {
-            isMovingDown = true;
+            this.gameObject.GetComponent<MeshRenderer>().sharedMaterial = baseMaterial;
         }
     }
 }
