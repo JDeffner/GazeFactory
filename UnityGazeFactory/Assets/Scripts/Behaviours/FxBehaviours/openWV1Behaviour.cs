@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class WP2RPMUpBehaviour : StateMachineBehaviour
+public class openWV1Behaviour : StateMachineBehaviour
 {
     private GameObject targetedObject;
     private SimpleGazeMark gazeMark;
@@ -10,7 +10,7 @@ public class WP2RPMUpBehaviour : StateMachineBehaviour
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
         // Set targeted Object
-        targetedObject = GameObject.Find("WP2RPMUpSwitch");        // Find GazeGuiding Components
+        targetedObject = GameObject.Find("WV1Switch");        // Find GazeGuiding Components
         gazeMark =  FindObjectOfType<SimpleGazeMark>();
         postController = FindObjectOfType<PostProcessingController>();
         gazeText = FindObjectOfType<SimpleGazeText>();
@@ -20,7 +20,7 @@ public class WP2RPMUpBehaviour : StateMachineBehaviour
         gazeText.targetedObject = targetedObject;
         // Set Text, TextColor and Mark Color
         string color = "#FF4306"; // 
-        gazeText.text = "Abweichung: WP2RPM erhöht\nAktion: WP2RPM senken";
+        gazeText.text = "Abweichung: WV1 geschlossen\nAktion: WV1 öffnen";
         gazeText.textColor = color;
         gazeMark.markColor = color;
         // Set GazeGuiding active

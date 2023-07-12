@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class WP1RPMUpBehaviour : StateMachineBehaviour
+public class DecreaseWP1RPM : StateMachineBehaviour
 {
     private GameObject targetedObject;
     private SimpleGazeMark gazeMark;
@@ -10,7 +10,7 @@ public class WP1RPMUpBehaviour : StateMachineBehaviour
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
         // Set targeted Object
-        targetedObject = GameObject.Find("WP1RPMDownSwitch");        // Find GazeGuiding Components
+        targetedObject = GameObject.Find("WP1RPMDown");        // Find GazeGuiding Components
         gazeMark =  FindObjectOfType<SimpleGazeMark>();
         postController = FindObjectOfType<PostProcessingController>();
         gazeText = FindObjectOfType<SimpleGazeText>();
@@ -20,7 +20,7 @@ public class WP1RPMUpBehaviour : StateMachineBehaviour
         gazeText.targetedObject = targetedObject;
         // Set Text, TextColor and Mark Color
         string color = "#FF4306"; // 
-        gazeText.text = "Abweichung: WP1RPM erhöht\nAktion: WP1RPM senken";
+        gazeText.text = "Abweichung: WP1RPM zu hoch\nAktion: WP1RPM senken";
         gazeText.textColor = color;
         gazeMark.markColor = color;
         // Set GazeGuiding active

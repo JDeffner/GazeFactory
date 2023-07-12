@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CPRPMUPBehaviour : StateMachineBehaviour
+public class openSV1Behaviour : StateMachineBehaviour
 {
     private GameObject targetedObject;
     private SimpleGazeMark gazeMark;
@@ -10,7 +10,7 @@ public class CPRPMUPBehaviour : StateMachineBehaviour
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
         // Set targeted Object
-        targetedObject = GameObject.Find("CPRPMDownSwitch");        // Find GazeGuiding Components
+        targetedObject = GameObject.Find("SV1Switch");        // Find GazeGuiding Components
         gazeMark =  FindObjectOfType<SimpleGazeMark>();
         postController = FindObjectOfType<PostProcessingController>();
         gazeText = FindObjectOfType<SimpleGazeText>();
@@ -20,7 +20,7 @@ public class CPRPMUPBehaviour : StateMachineBehaviour
         gazeText.targetedObject = targetedObject;
         // Set Text, TextColor and Mark Color
         string color = "#FF4306"; // 
-        gazeText.text = "Abweichung: CPRPM erhöht\nAktion: CPRPM senken";
+        gazeText.text = "Abweichung: SV1 geschlossen\nAktion: SV1 öffnen";
         gazeText.textColor = color;
         gazeMark.markColor = color;
         // Set GazeGuiding active

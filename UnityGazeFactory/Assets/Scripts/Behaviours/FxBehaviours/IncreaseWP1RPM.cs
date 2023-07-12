@@ -1,6 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class RodsExtractedBehaviour : StateMachineBehaviour
+public class IncreaseWP1RPM : StateMachineBehaviour
 {
     private GameObject targetedObject;
     private SimpleGazeMark gazeMark;
@@ -10,7 +12,7 @@ public class RodsExtractedBehaviour : StateMachineBehaviour
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
         // Set targeted Object
-        targetedObject = GameObject.Find("ExtractRodsButton");        // Find GazeGuiding Components
+        targetedObject = GameObject.Find("WP1RPMUp");        // Find GazeGuiding Components
         gazeMark =  FindObjectOfType<SimpleGazeMark>();
         postController = FindObjectOfType<PostProcessingController>();
         gazeText = FindObjectOfType<SimpleGazeText>();
@@ -20,7 +22,7 @@ public class RodsExtractedBehaviour : StateMachineBehaviour
         gazeText.targetedObject = targetedObject;
         // Set Text, TextColor and Mark Color
         string color = "#FF4306"; // 
-        gazeText.text = "Abweichung: Brennstäbe zu weit herausgefahren\nAktion: Brennstäbe einfahren";
+        gazeText.text = "Abweichung: WP1RPM zu niedrig\nAktion: WP1RPM erhöhen";
         gazeText.textColor = color;
         gazeMark.markColor = color;
         // Set GazeGuiding active
@@ -34,3 +36,4 @@ public class RodsExtractedBehaviour : StateMachineBehaviour
         // gazeMark.isActive = false;
     }
 }
+
