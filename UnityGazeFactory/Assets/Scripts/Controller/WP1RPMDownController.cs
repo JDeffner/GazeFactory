@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class WP1RPMDownController : MonoBehaviour
@@ -16,7 +17,8 @@ public class WP1RPMDownController : MonoBehaviour
     {
         if (controllerCubeBehaviour.getNPPSystemInterface().getWP1RPM() > 200)
         {
-            controllerCubeBehaviour.getNPPSystemInterface().setWP1RPM(controllerCubeBehaviour.getNPPSystemInterface().getWP1RPM() - 200);
+            SharedRessource.currentWP1RPM -= 200;
+            controllerCubeBehaviour.getNPPSystemInterface().setWP1RPM(SharedRessource.currentWP1RPM);
 
         } else controllerCubeBehaviour.getNPPSystemInterface().setWP1RPM(0);
     }

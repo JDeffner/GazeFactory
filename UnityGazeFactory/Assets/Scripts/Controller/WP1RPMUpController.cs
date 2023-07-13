@@ -14,7 +14,9 @@ public class WP1RPMUpController : MonoBehaviour
     {
         if (controllerCubeBehaviour.getNPPSystemInterface().getWP1RPM() < 2000)
         {
-            controllerCubeBehaviour.getNPPSystemInterface().setWP1RPM(controllerCubeBehaviour.getNPPSystemInterface().getWP1RPM() + 200);
+            if (controllerCubeBehaviour.getNPPSystemInterface().getWP1RPM() == 0) SharedRessource.currentWP1RPM = 0;
+            SharedRessource.currentWP1RPM += 200;
+            controllerCubeBehaviour.getNPPSystemInterface().setWP1RPM(SharedRessource.currentWP1RPM);
 
         } else controllerCubeBehaviour.getNPPSystemInterface().setWP1RPM(2000);
     }
