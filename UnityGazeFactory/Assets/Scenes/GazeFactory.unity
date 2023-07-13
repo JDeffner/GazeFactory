@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4236,6 +4236,7 @@ GameObject:
   - component: {fileID: 230219962}
   - component: {fileID: 230219961}
   - component: {fileID: 230219960}
+  - component: {fileID: 230219963}
   m_Layer: 0
   m_Name: TextWaterLevelReactor (2)
   m_TagString: Untagged
@@ -4410,6 +4411,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &230219963
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230219958}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.96483, y: 2.2876296, z: 0}
+  m_Center: {x: -4.982416, y: 1.1438148, z: -0.0000038146973}
 --- !u!1 &243117786
 GameObject:
   m_ObjectHideFlags: 0
@@ -16111,7 +16125,7 @@ TextMesh:
   m_Anchor: 4
   m_Alignment: 1
   m_TabSize: 4
-  m_FontSize: 0
+  m_FontSize: 200
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 0}
@@ -16230,7 +16244,7 @@ RectTransform:
   m_GameObject: {fileID: 1017037204}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.554}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -0.08, y: 0.08, z: 0.08}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -21661,7 +21675,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh61708
+  m_Name: pb_Mesh28324
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25008,7 +25022,7 @@ MonoBehaviour:
   isBlinking: 1
   isActive: 1
   DebugMode: 0
-  vignetteOffset: 0.65
+  vignetteOffset: 0.7
 --- !u!114 &1827973677
 MonoBehaviour:
   m_ObjectHideFlags: 0
