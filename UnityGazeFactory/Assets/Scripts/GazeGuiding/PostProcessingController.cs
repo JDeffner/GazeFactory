@@ -77,8 +77,6 @@ public class PostProcessingController : MonoBehaviour
         Vector4 viewPos = vrCamera.worldToLocalMatrix * new Vector4(objectPosition.x, objectPosition.y, objectPosition.z, 1);
         Vector2 dir = new Vector2(viewPos.x, viewPos.y);
         
-        if(DebugMode) Debug.Log(dir);
-        
         vignette.center.value = new Vector2(0.5f, 0.5f) + -dir.normalized * vignetteOffset;
     }
 

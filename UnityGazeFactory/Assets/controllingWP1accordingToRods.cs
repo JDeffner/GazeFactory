@@ -23,12 +23,10 @@ namespace DefaultNamespace
 
                 if (tmp - var1 > 0)
                 {
-                    Debug.Log("sinking");
                     isSinking = true;
                 }
                 else
                 {
-                    Debug.Log("rising");
                     isSinking = false;
                 }
 
@@ -42,7 +40,6 @@ namespace DefaultNamespace
                     dCalc = i;
                 }
                 counter = 0f;
-                Debug.Log("Reichweite: " + dCalc);
             }
         }
     }

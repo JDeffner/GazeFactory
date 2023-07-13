@@ -15,7 +15,7 @@ public class SimpleGazeText : MonoBehaviour
 
     void Start()
     {
-        canvas.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        canvas.transform.localScale = new Vector3(-0.08f, 0.08f, 0.08f);
     }
     
     void Update()
@@ -55,7 +55,7 @@ public class SimpleGazeText : MonoBehaviour
     private void editCanvas()
     {
         canvas.GetComponent<TextMesh>().text = text;
-        canvas.GetComponent<TextMesh>().characterSize = textSize;
+        canvas.transform.localScale = new Vector3(-textSize, textSize, textSize);
         
         Color color;
         if (ColorUtility.TryParseHtmlString(textColor, out color))

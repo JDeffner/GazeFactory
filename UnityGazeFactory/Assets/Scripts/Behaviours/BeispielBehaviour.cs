@@ -22,10 +22,10 @@ public class BeispielBehaviour : StateMachineBehaviour
         postController.targetedObject = targetedObject;
         gazeText.targetedObject = targetedObject;
         // Set Text, TextColor and Mark Color
-        string color = "#FF4306"; // Red Hex Code
+        string color = "#FF4306"; // Hex Code
         gazeText.text = "Test \n ist \n gelungen!!!!"; // "\n" für Zeilenumbruch
         gazeText.textColor = color;
-        gazeText.textSize = 0.03f; // 0.03f is normal Size -> U need to undo in next State
+        gazeText.textSize = 0.08f; // 0.08f is normal Size -> U need to undo in next State
         gazeMark.markColor = color;
         gazeMark.markSize = 0.06f; // 0.06f is normal Size -> U need to undo in next State
         // Set GazeGuiding active
@@ -37,5 +37,7 @@ public class BeispielBehaviour : StateMachineBehaviour
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
         // gazeMark.isActive = false;
+        // Wenn man Größe ändert
+        // gazeText.textSize = 0.08f;
     }
 }
