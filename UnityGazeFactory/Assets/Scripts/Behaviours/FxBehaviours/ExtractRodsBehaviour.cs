@@ -25,6 +25,7 @@ public class ExtractRodsBehaviour : StateMachineBehaviour
         gazeText.text = "Abweichung: Brennstäbe zu tief im Reaktorkern\nAktion: Brennstäbe herausfahren";
         gazeText.textColor = color;
         gazeMark.markColor = color;
+        gazeMark.markSize = 0.06f;
         // Set GazeGuiding active
         gazeMark.isActive = true;
         postController.isActive = true;

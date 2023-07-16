@@ -1,31 +1,25 @@
 ﻿using UnityEngine;
 
-public class animateWP1RPMUp : StateMachineBehaviour
+public class behaviourWaitLess2250 : StateMachineBehaviour
 {
     private GameObject targetedObject;
-    private SimpleGazeMark gazeMark;
     private PostProcessingController postController;
     private SimpleGazeText gazeText;
     
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
         // Set targeted Object
-        targetedObject = GameObject.Find("WP1RPMUp");        // Find GazeGuiding Components
-        gazeMark =  FindObjectOfType<SimpleGazeMark>();
+        targetedObject = GameObject.Find("WaitCube");        // Find GazeGuiding Components
         postController = FindObjectOfType<PostProcessingController>();
         gazeText = FindObjectOfType<SimpleGazeText>();
         // Change Targeted Objects
-        gazeMark.targetedObject = targetedObject;
         postController.targetedObject = targetedObject;
         gazeText.targetedObject = targetedObject;
         // Set Text, TextColor and Mark Color
-        string color = "#FF4306"; // 
-        gazeText.text = "Abweichung: WP1RPM zu niedrig\nAktion: WP1RPM erhöhen";
+        string color = "#32CD32"; // 
+        gazeText.text = "Warten bis Wasserlevel \n< 2250mm";
         gazeText.textColor = color;
-        gazeMark.markColor = color;
-        gazeMark.markSize = 0.06f;
         // Set GazeGuiding active
-        gazeMark.isActive = true;
         postController.isActive = true;
         gazeText.isActive = true;
     }
