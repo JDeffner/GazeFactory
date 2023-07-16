@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class animateWP1RPMUp : StateMachineBehaviour
+public class rodsTo40 : StateMachineBehaviour
 {
     private GameObject targetedObject;
     private SimpleGazeMark gazeMark;
@@ -10,7 +10,7 @@ public class animateWP1RPMUp : StateMachineBehaviour
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
         // Set targeted Object
-        targetedObject = GameObject.Find("WP1RPMUp");        // Find GazeGuiding Components
+        targetedObject = GameObject.Find("ExtractRodsButton");        // Find GazeGuiding Components
         gazeMark =  FindObjectOfType<SimpleGazeMark>();
         postController = FindObjectOfType<PostProcessingController>();
         gazeText = FindObjectOfType<SimpleGazeText>();
@@ -19,8 +19,8 @@ public class animateWP1RPMUp : StateMachineBehaviour
         postController.targetedObject = targetedObject;
         gazeText.targetedObject = targetedObject;
         // Set Text, TextColor and Mark Color
-        string color = "#FF4306"; // 
-        gazeText.text = "Abweichung: WP1RPM zu niedrig\nAktion: WP1RPM erhöhen";
+        string color = "#32CD32"; // 
+        gazeText.text = "Sequenz: Hochfahren\nAktion: Brennstäbe auf 40 setzen";
         gazeText.textColor = color;
         gazeMark.markColor = color;
         gazeMark.markSize = 0.06f;

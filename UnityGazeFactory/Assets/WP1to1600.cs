@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class animateWP1RPMUp : StateMachineBehaviour
+public class WP1to1600 : StateMachineBehaviour
 {
     private GameObject targetedObject;
     private SimpleGazeMark gazeMark;
@@ -19,8 +19,8 @@ public class animateWP1RPMUp : StateMachineBehaviour
         postController.targetedObject = targetedObject;
         gazeText.targetedObject = targetedObject;
         // Set Text, TextColor and Mark Color
-        string color = "#FF4306"; // 
-        gazeText.text = "Abweichung: WP1RPM zu niedrig\nAktion: WP1RPM erhöhen";
+        string color = "#32CD32"; // 
+        gazeText.text = "Sequenz: Hochfahren\nAktion: WP1RPM auf 1600 erhöhen";
         gazeText.textColor = color;
         gazeMark.markColor = color;
         gazeMark.markSize = 0.06f;
