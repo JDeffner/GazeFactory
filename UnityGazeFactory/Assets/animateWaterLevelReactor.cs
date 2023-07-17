@@ -22,7 +22,7 @@ public class animateWaterLevelReactor : StateMachineBehaviour
         string color = "#32CD32"; // 
         gazeText.textColor = color;
         gazeMark.markColor = color;
-        gazeMark.markSize = 0.11f;
+        gazeMark.markSize = 0.14f;
         // Set GazeGuiding active
         gazeMark.isActive = true;
         postController.isActive = true;

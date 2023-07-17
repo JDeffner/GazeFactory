@@ -25185,7 +25185,7 @@ MonoBehaviour:
   - {x: -0.05, y: 0.2, z: 0}
   - {x: -1, y: 1, z: 0}
   - {x: -0.05, y: 0.2, z: 0}
-  - {x: -1.13, y: -0.17, z: -0.1}
+  - {x: -1.25, y: 0.16, z: -0.1}
   - {x: 0.2, y: 0.2, z: 0}
   markBlinkIntervall: 0.5
   rotationSpeed: 50
@@ -25250,7 +25250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vrCamera: {fileID: 1649192287}
-  targetedObject: {fileID: 1930736782}
+  targetedObject: {fileID: 609282654}
   canvas: {fileID: 1017037209}
   text: 
   textColor: 
@@ -25274,16 +25274,16 @@ MonoBehaviour:
   - {x: 0, y: 0.4, z: 0}
   - {x: 0, y: 0.4, z: 0}
   - {x: 0, y: 0.4, z: 0}
-  - {x: 0, y: -0.1, z: 0}
+  - {x: 0, y: -0.16, z: 0}
   - {x: 0, y: 0.4, z: 0}
   - {x: 0, y: 0.4, z: 0}
-  - {x: 0, y: -0.1, z: 0}
-  - {x: 0, y: 0.4, z: 0}
-  - {x: 0, y: 0.4, z: 0}
-  - {x: 0, y: 0.4, z: 0}
+  - {x: 0, y: -0.16, z: 0}
   - {x: 0, y: 0.4, z: 0}
   - {x: 0, y: 0.4, z: 0}
   - {x: 0, y: 0.4, z: 0}
+  - {x: 0, y: 0.4, z: 0}
+  - {x: 0, y: 0.4, z: 0}
+  - {x: 1.41, y: 0.96, z: 1.14}
   - {x: 0.6, y: 0.4, z: 0}
   isActive: 1
 --- !u!1 &1891461287
