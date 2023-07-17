@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Numerics;
 using System.Threading;
+using System.Threading.Tasks;
 using NPPImpl.NPPcomponents;
 
 namespace NPPImpl
@@ -413,56 +414,64 @@ namespace NPPImpl
 			this.CP.setRPM(rpm);
 		}
 
-		public void setSV1Status(Boolean st)
+		public async void setSV1Status(Boolean st)
 		{
- 			try
-			{
-				Thread.Sleep(500);
-			}
-			catch (ThreadInterruptedException e)
-			{
-			} 
-
 			this.SV1.setStatus(st);
+			await Task.Run(() =>
+			{
+				try
+				{
+					Thread.Sleep(500);
+				}
+				catch (ThreadInterruptedException e)
+				{
+				}
+			});
 		}
 
-		public void setSV2Status(Boolean st)
+		public async void setSV2Status(Boolean st)
 		{
-			try
-			{
-				 Thread.Sleep(500);
-			}
-			catch (ThreadInterruptedException e)
-			{
-			}
-
 			this.SV2.setStatus(st);
+			await Task.Run(() =>
+			{
+				try
+				{
+					Thread.Sleep(500);
+				}
+				catch (ThreadInterruptedException e)
+				{
+				}
+			});
 		}
 
-		public void setWV1Status(Boolean st)
+		public async void setWV1Status(Boolean st)
 		{
- 			try
-			{
-				Thread.Sleep(500);
-			}
-			catch (ThreadInterruptedException e)
-			{
-			} 
-
 			this.WV1.setStatus(st);
+			await Task.Run(() =>
+			{
+				try
+				{
+					Thread.Sleep(500);
+				}
+				catch (ThreadInterruptedException e)
+				{
+				}
+			});
 		}
 
-		public void setWV2Status(Boolean st)
+		public async void setWV2Status(Boolean st)
 		{
- 			try
-			{
-				Thread.Sleep(500);
-			}
-			catch (ThreadInterruptedException e)
-			{
-			} 
-
 			this.WV2.setStatus(st);
+			await Task.Run(() =>
+			{
+				try
+				{
+					Thread.Sleep(500);
+				}
+				catch (ThreadInterruptedException e)
+				{
+				}
+			});
 		}
 
 		/// GETTER

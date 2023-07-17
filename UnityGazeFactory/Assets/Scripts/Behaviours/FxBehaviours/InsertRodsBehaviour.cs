@@ -10,7 +10,7 @@ public class InsertRodsBehaviour : StateMachineBehaviour
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
         // Set targeted Object
-        targetedObject = GameObject.Find("ExtractRodsButton");        // Find GazeGuiding Components
+        targetedObject = GameObject.Find("InsertRodsButton");        // Find GazeGuiding Components
         gazeMark =  FindObjectOfType<SimpleGazeMark>();
         postController = FindObjectOfType<PostProcessingController>();
         gazeText = FindObjectOfType<SimpleGazeText>();

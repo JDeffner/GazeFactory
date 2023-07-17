@@ -20,7 +20,7 @@ public class S3Behaviour : StateMachineBehaviour
         gazeText.targetedObject = targetedObject;
         // Set Text, TextColor and Mark Color
         string color = "#32CD32"; // 
-        gazeText.text = "Sequenz: Hochfahren\nAktion: Brennstäbe auf 95% herausfahren";
+        gazeText.text = "Sequenz: Hochfahren\nAktion: Brennstäbe auf 95 herausfahren";
         gazeText.textColor = color;
         gazeMark.markColor = color;
         // Set GazeGuiding active
