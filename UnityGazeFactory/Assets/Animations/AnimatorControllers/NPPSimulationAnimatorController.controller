@@ -11645,7 +11645,10 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 6
+    m_ConditionEvent: WP1RPM
+    m_EventTreshold: 800
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2865927515191582902}
   m_Solo: 0
