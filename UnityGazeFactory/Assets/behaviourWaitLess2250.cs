@@ -22,6 +22,7 @@ public class behaviourWaitLess2250 : StateMachineBehaviour
         // Set GazeGuiding active
         postController.isActive = true;
         gazeText.isActive = true;
+        gazeText.textSize = 18;
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
