@@ -28,6 +28,7 @@ public class rodsTo80 : StateMachineBehaviour
         gazeMark.isActive = true;
         postController.isActive = true;
         gazeText.isActive = true;
+        gazeText.textSize = 0.08f;
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
