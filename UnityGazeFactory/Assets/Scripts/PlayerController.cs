@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
             Vector3 gravityVector = new Vector3(0, 9.81f,0);
 
             // Char Controller based movement
-            characterController.Move(speed * Time.deltaTime * Vector3.ProjectOnPlane(trueDirectionVector,Vector3.up) - gravityVector * Time.deltaTime);
+            characterController.Move(speed * Time.deltaTime * Vector3.ProjectOnPlane(trueDirectionVector,Vector3.up));
 
             // transform based movement
             // transform.position += speed * Time.deltaTime * Vector3.ProjectOnPlane(trueDirectionVector,Vector3.up);
