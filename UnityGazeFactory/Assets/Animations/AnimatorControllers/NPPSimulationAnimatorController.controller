@@ -25139,7 +25139,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 4
     m_ConditionEvent: WP1RPM
-    m_EventTreshold: 200
+    m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4634465625042948463}
   m_Solo: 0
@@ -39906,9 +39906,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: WV2Status
     m_EventTreshold: 0
-  - m_ConditionMode: 6
+  - m_ConditionMode: 3
     m_ConditionEvent: WP1RPM
-    m_EventTreshold: 200
+    m_EventTreshold: 1
   - m_ConditionMode: 6
     m_ConditionEvent: WP2RPM
     m_EventTreshold: 0
