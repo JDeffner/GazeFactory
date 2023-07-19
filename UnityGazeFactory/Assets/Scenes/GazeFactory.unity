@@ -7904,7 +7904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputMovementVector:
-    actionPath: 
+    actionPath: /actions/default/in/Walking
     needsReinit: 0
   speed: 2
   vrCameraTransform: {fileID: 514839572}
@@ -10355,8 +10355,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f19a4aba4eb4b6fbd64b69c3e144f51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSinking: 0
-  dCalc: 0
 --- !u!65 &658453071
 BoxCollider:
   m_ObjectHideFlags: 0
