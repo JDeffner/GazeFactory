@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using DefaultNamespace;
 using UnityEngine;
 using NPPImpl;
 
@@ -12,8 +11,6 @@ public class NPPSimulationAnimationBehaviour : MonoBehaviour
     private ControllerCubeBehaviour controllerCubeBehaviour;
     // Reference to the NPPSystemInterface component
     private NPPSystemInterface systemInterface;
-    private bool isSinking;
-    private int dCalc;
 
     void Start()
     {
@@ -23,8 +20,6 @@ public class NPPSimulationAnimationBehaviour : MonoBehaviour
         controllerCubeBehaviour = GetComponent<ControllerCubeBehaviour>();
         // Get the NPPSystemInterface component
         systemInterface = controllerCubeBehaviour.getNPPSystemInterface();
-        isSinking = GameObject.Find("Wart").GetComponent<controllingWP1accordingToRods>().isSinking;
-        dCalc = GameObject.Find("Wart").GetComponent<controllingWP1accordingToRods>().dCalc;
     }
 
 void Update()
@@ -47,7 +42,6 @@ void Update()
         animator.SetInteger("WaterLevelCondenser", systemInterface.getWaterLevelCondenser());
         animator.SetInteger("PressureReactor", systemInterface.getPressureReactor());
         animator.SetInteger("PressureCondenser", systemInterface.getPressureCondenser());
-        animator.SetInteger("StandardValue", systemInterface.getStandardValue());
         animator.SetInteger("PowerOutlet", systemInterface.getPowerOutlet());
         animator.SetBool("ReactorTankStatus", systemInterface.getReactorTankStatus());
         animator.SetBool("ReactorStatus", systemInterface.getReactorStatus());
@@ -56,11 +50,6 @@ void Update()
         animator.SetBool("KPStatus", systemInterface.getKPStatus());
         animator.SetBool("AtomicStatus", systemInterface.getAtomicStatus());
         animator.SetInteger("RodPosition", systemInterface.getRodPosition());
-        animator.SetInteger("WP1RPMSet", systemInterface.getWP1RPMSet());
-        animator.SetInteger("WP2RPMSet", systemInterface.getWP2RPMSet());
-        animator.SetInteger("CPRPMSet", systemInterface.getCPRPMSet());
-        animator.SetBool("isSinking", isSinking);
-        animator.SetInteger("dCalc", dCalc);
     }
 }
 
