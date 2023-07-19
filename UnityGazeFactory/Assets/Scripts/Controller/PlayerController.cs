@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
 
     // Start is called before the first frame update
     private void Start() {
-        characterController = GetComponent<CharacterController>();
+        //characterController = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
@@ -25,10 +25,10 @@ public class PlayerController : MonoBehaviour
             Vector3 gravityVector = new Vector3(0, 9.81f,0);
 
             // Char Controller based movement
-            characterController.Move(speed * Time.deltaTime * Vector3.ProjectOnPlane(trueDirectionVector,Vector3.up));
+            //characterController.Move(speed * Time.deltaTime * Vector3.ProjectOnPlane(trueDirectionVector,Vector3.up));
 
             // transform based movement
-            // transform.position += speed * Time.deltaTime * Vector3.ProjectOnPlane(trueDirectionVector,Vector3.up);
+            transform.position += speed * Time.deltaTime * Vector3.ProjectOnPlane(trueDirectionVector,Vector3.up);
 
         const float MINIMAL_RECOGNIZED_INPUT = 0.1f;
         if(inputMovementVector.axis.magnitude > MINIMAL_RECOGNIZED_INPUT) {
