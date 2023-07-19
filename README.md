@@ -3,10 +3,12 @@ Diese Seite enthält den folgenden Inhalt:
 - [Projektbeschreibung](#projektbeschreibung)
 - [Nutzen von Gaze Guiding](#akw-und-gaze-guiding)
 - [Umsetzung des Gaze Guidings](#umsetzung-des-gaze-guidings)
+- [Bedienung und Funktionen](#bedienung-und-funktionen)
 - [Setup und weitere nützliche Informationen](#setup-und-weitere-nützliche-informationen)
   - [Starten des Projektes](#starten-des-projektes)
   - [Zustandserkennung](#zustandserkennung)
   - [Richtungserkennung](#richtungserkennung)
+- [Externe Bibliotheken und Quellen](#externe-bibliotheken-und-quellen)
 
 ## Projektbeschreibung
 Bei der GazeFactory handelt es sich um ein Informatikprojekt der Studenten [Christof Treitges](https://github.com/CTreitges), [Joël Deffner](https://github.com/JDeffner), [David Jacobs](https://github.com/DJacobs-dev) und [Justin Weich](https://github.com/1Houston1) der Universität Trier unter der Leitung von [Jun.-Prof. Dr.-Ing. Benjamin Weyers](https://www.uni-trier.de/universitaet/fachbereiche-faecher/fachbereich-iv/faecher/informatikwissenschaften/professuren/human-computer-interaction/team/benjamin-weyers).
@@ -27,6 +29,11 @@ Bei den `GGT`s handelt es sich um einen `Text` (grün), dieser gibt an welcher A
 
 Die Farbänderung wird vorgenommen um zusätzlich dem Probanden mitzuteilen, dass von der `SOP` abgewischen wurde.
 
+## Bedienung und Funktionen
+Die gesamte Simulation ist sowohl in `VR` als auch im `Desktopmodus` spielbar, jedoch kommt es bei letzterem zu Komplikationen. Die `Richtungserkennung` ist nur dann ersichtlich, wenn ein VR-Headset genutzt wird, da dort erst das [Post Processing](#externe-bibliotheken-und-quellen) gerendert wird. Zudem drehen sich die Texte nicht mehr automatisch zum Spieler, da diese sich an der Heaset-Kamera orientieren. Das `Ausrufezeichen` funktioniert dagegen einwandfrei. 
+
+Im `Desktopmodus` werden die Aktionen des Spielers dann wahrgenommen, wenn die Maus über die davorgesehene Schaltflächen bewegt wird, analog ist dies zu der `VR-Variante`. Durch das berühren der Schaltflächen mit der digitalen Hand werden entsprechende Eingaben getätigt.
+
 ## Setup und weitere nützliche Informationen
 
 ### Starten des Projektes
@@ -40,4 +47,8 @@ Um das Projekt zu starten sind folgende Schritte notwendig:
 Um zu sehen in welchem Zustand sich die Simulation befindet, kann unter `Window` > `Animation` > `Animator` der Zustandsanimator angezeigt werden. Zusätzlich muss daraufhin der `ControllerCube` (8. Element in der `Hierarchie`) angeklickt werden um das Zustandsmodell zu laden. Mit blauem Balken wird angezeigt, welcher der aktuelle Zustand ist.
 
 ### Richtungserkennung
-Die Richtungserkennung ist nur dann ersichtlich, wenn ein VR-Headset genutzt wird, da dort erst der Rendervorgang stattfindet.
+Die Richtungserkennung ist nur dann ersichtlich, wenn ein VR-Headset genutzt wird, da dort erst das [Post Processing](https://docs.unity3d.com/Packages/com.unity.postprocessing@2.2/manual/Installation.html) gerendert wird.
+
+## Externe Bibliotheken und Quellen
+- Prefab des Ausrufezeichens zu finden unter [Sketchfab](https://sketchfab.com/3d-models/exclamation-mark-3d-icon-35fcb8285f134554989f822ab90ee974)
+- Post Processing Bibliothek zu finden unter [Post Processing](https://docs.unity3d.com/Packages/com.unity.postprocessing@2.2/manual/Installation.html)
