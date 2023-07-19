@@ -25047,7 +25047,7 @@ MonoBehaviour:
   rotationSpeed: 50
   markSize: 0.06
   markColor: 
-  markAlpha: 0.7
+  markAlpha: 0.9
   isActive: 0
 --- !u!114 &1827973676
 MonoBehaviour:
