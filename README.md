@@ -3,9 +3,9 @@ Diese Seite enthält den folgenden Inhalt:
 - [Projektbeschreibung](#projektbeschreibung)
 - [Nutzen von Gaze Guiding](#akw-und-gaze-guiding)
 - [Umsetzung des Gaze Guidings](#umsetzung-des-gaze-guidings)
-- [Bedienung und Funktionen](#bedienung-und-funktionen)
 - [Setup und weitere nützliche Informationen](#setup-und-weitere-nützliche-informationen)
   - [Starten des Projektes](#starten-des-projektes)
+  - [Bedienung und Funktionen](#bedienung-und-funktionen)
   - [Zustandserkennung](#zustandserkennung)
 - [Externe Bibliotheken und Quellen](#externe-bibliotheken-und-quellen)
 
@@ -28,11 +28,6 @@ Bei den `GGT`s handelt es sich um einen `Text` (grün), dieser gibt an welcher A
 
 Die Farbänderung wird vorgenommen um zusätzlich dem Probanden mitzuteilen, dass von der `SOP` abgewischen wurde.
 
-## Bedienung und Funktionen
-Die gesamte Simulation ist sowohl in `VR` als auch im `Desktopmodus` spielbar, jedoch kommt es bei letzterem zu Komplikationen. Die `Richtungserkennung` ist nur dann ersichtlich, wenn ein VR-Headset genutzt wird, da dort erst das [Post Processing](#externe-bibliotheken-und-quellen) gerendert wird. Zudem drehen sich die Texte nicht mehr automatisch zum Spieler, da diese sich an der Heaset-Kamera orientieren. Das `Ausrufezeichen` funktioniert dagegen einwandfrei. 
-
-Im `Desktopmodus` werden die Aktionen des Spielers dann wahrgenommen, wenn die Maus über die davorgesehene Schaltflächen bewegt wird, analog ist dies zu der `VR-Variante`. Durch das berühren der Schaltflächen mit der digitalen Hand werden entsprechende Eingaben getätigt.
-
 ## Setup und weitere nützliche Informationen
 
 ### Starten des Projektes
@@ -41,6 +36,11 @@ Um das Projekt zu starten sind folgende Schritte notwendig:
 - den entpackten Ordner im Unity Hub öffnen
 - zum öffnen wird die Editor-Version `2021.3.25f` empfohlen, auf welcher das Projekt programmiert wurde.
 - nachdem das Projekt geladen hat muss nur noch der Playbutton gedrückt werden
+
+### Bedienung und Funktionen
+Die gesamte Simulation ist sowohl in `VR` als auch im `Desktopmodus` spielbar, jedoch kommt es bei letzterem zu Komplikationen. Die `Richtungserkennung` ist nur dann ersichtlich, wenn ein VR-Headset genutzt wird, da dort erst das [Post Processing](#externe-bibliotheken-und-quellen) gerendert wird. Zudem drehen sich die Texte nicht mehr automatisch zum Spieler, da diese sich an der Heaset-Kamera orientieren. Das `Ausrufezeichen` funktioniert dagegen einwandfrei. 
+
+Im `Desktopmodus` werden die Aktionen des Spielers dann wahrgenommen, wenn die Maus über die davorgesehene Schaltflächen bewegt wird, analog ist dies zu der `VR-Variante`. Durch das berühren der Schaltflächen mit der digitalen Hand werden entsprechende Eingaben getätigt.
 
 ### Zustandserkennung
 Um zu sehen in welchem Zustand sich die Simulation befindet, kann unter `Window` > `Animation` > `Animator` der Zustandsanimator angezeigt werden. Zusätzlich muss daraufhin der `ControllerCube` (8. Element in der `Hierarchie`) angeklickt werden um das Zustandsmodell zu laden. Mit blauem Balken wird angezeigt, welcher der aktuelle Zustand ist.
