@@ -20,7 +20,7 @@ public class Finish : StateMachineBehaviour
         gazeText.targetedObject = targetedObject;
         // Set Text, TextColor and Mark Color
         string color = "#32CD32"; // 
-        gazeText.text = "Kraftwerk erfolgreich hochgefahren!";
+        gazeText.text = "Vielen Dank für Ihre Aufmerksamkeit!";
         gazeText.textColor = color;
         gazeMark.markColor = color;
         gazeMark.markSize = 0.06f;
