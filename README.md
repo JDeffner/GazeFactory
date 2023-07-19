@@ -4,6 +4,9 @@ Diese Seite enthält den folgenden Inhalt:
 - [Nutzen von Gaze Guiding](#akw-und-gaze-guiding)
 - [Umsetzung des Gaze Guidings](#umsetzung-des-gaze-guidings)
 - [Setup und weitere nützliche Informationen](#setup-und-weitere-nützliche-informationen)
+  - [Starten des Projektes](#starten-des-projektes)
+  - [Zustandserkennung](#zustandserkennung)
+  - [Richtungserkennung](#richtungserkennung)
 
 ## Projektbeschreibung
 Bei der GazeFactory handelt es sich um ein Informatikprojekt der Studenten [Christof Treitges](https://github.com/CTreitges), [Joël Deffner](https://github.com/JDeffner), [David Jacobs](https://github.com/DJacobs-dev) und [Justin Weich](https://github.com/1Houston1) der Universität Trier unter der Leitung von [Jun.-Prof. Dr.-Ing. Benjamin Weyers](https://www.uni-trier.de/universitaet/fachbereiche-faecher/fachbereich-iv/faecher/informatikwissenschaften/professuren/human-computer-interaction/team/benjamin-weyers).
@@ -25,6 +28,8 @@ Bei den `GGT`s handelt es sich um einen `Text` (grün), dieser gibt an welcher A
 Die Farbänderung wird vorgenommen um zusätzlich dem Probanden mitzuteilen, dass von der `SOP` abgewischen wurde.
 
 ## Setup und weitere nützliche Informationen
+
+### Starten des Projektes
 Um das Projekt zu starten sind folgende Schritte notwendig:
 - das Projekt als `.zip` herunterladen und entpacken
 - den entpackten Ordner im Unity Hub öffnen
