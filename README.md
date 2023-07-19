@@ -7,7 +7,6 @@ Diese Seite enthält den folgenden Inhalt:
 - [Setup und weitere nützliche Informationen](#setup-und-weitere-nützliche-informationen)
   - [Starten des Projektes](#starten-des-projektes)
   - [Zustandserkennung](#zustandserkennung)
-  - [Richtungserkennung](#richtungserkennung)
 - [Externe Bibliotheken und Quellen](#externe-bibliotheken-und-quellen)
 
 ## Projektbeschreibung
@@ -45,9 +44,6 @@ Um das Projekt zu starten sind folgende Schritte notwendig:
 
 ### Zustandserkennung
 Um zu sehen in welchem Zustand sich die Simulation befindet, kann unter `Window` > `Animation` > `Animator` der Zustandsanimator angezeigt werden. Zusätzlich muss daraufhin der `ControllerCube` (8. Element in der `Hierarchie`) angeklickt werden um das Zustandsmodell zu laden. Mit blauem Balken wird angezeigt, welcher der aktuelle Zustand ist.
-
-### Richtungserkennung
-Die Richtungserkennung ist nur dann ersichtlich, wenn ein VR-Headset genutzt wird, da dort erst das [Post Processing](https://docs.unity3d.com/Packages/com.unity.postprocessing@2.2/manual/Installation.html) gerendert wird.
 
 ## Externe Bibliotheken und Quellen
 - Prefab des Ausrufezeichens zu finden unter [Sketchfab](https://sketchfab.com/3d-models/exclamation-mark-3d-icon-35fcb8285f134554989f822ab90ee974)
